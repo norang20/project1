@@ -111,6 +111,10 @@
     align-items: center;
     max-width: none;
     height: 73px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
     @include tabletMore {
       height: auto;
     }
@@ -125,7 +129,7 @@
       display: block;
       width: 200px;
       height: 35px;
-      background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0 / contain;
+      background: url("../../../resources/images/pattern/common/sulwhasoo_orange_logo.jpeg") no-repeat 0 0 / contain;
     }
     span {
       @include sr-only;

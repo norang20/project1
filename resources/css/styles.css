@@ -367,6 +367,12 @@
   background-color: #1d1d1d;
 }
 
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* **** area mixin ****/
 /* **** text attr ****/
 /* **** scroll ****/
@@ -3583,6 +3589,10 @@ input[type=checkbox] {
   align-items: center;
   max-width: none;
   height: 73px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 @media (min-width: 1024px) {
   #header .inner {
@@ -3602,7 +3612,7 @@ input[type=checkbox] {
   display: block;
   width: 200px;
   height: 35px;
-  background: url("../../../resources/images/pattern/common/head_logo.png") no-repeat 0 0/contain;
+  background: url("../../../resources/images/pattern/common/sulwhasoo_orange_logo.jpeg") no-repeat 0 0/contain;
 }
 #header #logo span {
   position: absolute !important;
@@ -3834,6 +3844,23 @@ input[type=checkbox] {
   content: "\f137";
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* bg-video */
 .slide-intro .swiper-slide {
   position: relative;
 }
