@@ -368,8 +368,51 @@
 }
 
 @font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-family: "Merriweather", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlbraSansTRIAL-Bold";
+  src: url("../../../resources/images/pattern/common/AlbraSansTRIAL-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlbraGroteskTRIAL-Medium";
+  src: url("../../../resources/images/pattern/common/AlbraGroteskTRIAL-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlbraTextTRIAL-Medium";
+  src: url("../../../resources/images/pattern/common/AlbraTextTRIAL-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlbraSansTRIAL-Medium";
+  src: url("../../../resources/images/pattern/common/AlbraSansTRIAL-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "QTWeise-Bold";
+  src: url("../../../resources/images/pattern/common/QTWeise-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "QTWeise";
+  src: url("../../../resources/images/pattern/common/QTWeisewoff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -3580,7 +3623,7 @@ input[type=checkbox] {
   left: 0;
   right: 0;
   height: 0;
-  background: #f8f8f8;
+  background: rgba(0, 0, 0, 0.7);
   transition: all 0.3s;
 }
 #header .inner {
@@ -3636,7 +3679,10 @@ input[type=checkbox] {
   }
 }
 #gnb .gnb__depth1 {
+  width: 1280px;
   display: flex;
+  color: white;
+  justify-content: space-between;
 }
 #gnb .gnb__depth1 > li {
   position: relative;
@@ -3735,6 +3781,7 @@ input[type=checkbox] {
   display: block;
 }
 .util .lang__btn {
+  color: white;
   height: 57px;
   margin-right: 10px;
   font-size: 2rem;
@@ -3795,6 +3842,12 @@ input[type=checkbox] {
 #nav-all.active {
   display: block;
   left: 0;
+}
+
+footer {
+  background-color: rgba(231, 110, 37, 0.7);
+  width: 100%;
+  height: 25rem;
 }
 
 :root {
@@ -3861,6 +3914,89 @@ input[type=checkbox] {
 }
 
 /* bg-video */
+.container {
+  border: 1px solid #f00;
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.container .section-img {
+  text-align: center;
+}
+.container .section-content .section-contentInner {
+  margin: 0 auto;
+}
+.container .section-content .section-contentInner .title {
+  font-family: "AlbraSansTRIAL-Medium";
+  font-size: 8.75rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 135px;
+}
+.container .mainProduct {
+  width: 693px;
+  height: 727px;
+  margin: 0 auto;
+  background-image: url(../../../resources/images/pattern/common/자음생크림3.png);
+  background-position: 50% 50%;
+}
+.container .mainTxt {
+  width: 1280px;
+  height: 446px;
+}
+.container .cream_video {
+  width: 470px;
+}
+.container .mainProduct2 {
+  width: 420px;
+  height: 840px;
+  margin: 0 auto;
+  margin-top: 185px;
+  background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
+}
+.container .mainTxt__sub {
+  font-family: "Noto Sans KR";
+  color: #ddd;
+}
+.container .yunjo_video {
+  width: 100%;
+}
+.container .item ul {
+  display: flex;
+}
+
+.heritage {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 600px;
+}
+.heritage__inner {
+  padding: 43px 18px;
+}
+.heritage__inner .heritage__title {
+  font-family: "QTWeise-Bold";
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.heritage__inner .heritage__body {
+  width: 600px;
+  margin-top: 13px;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+  color: #454545;
+  letter-spacing: 0.6px;
+}
+
+.products {
+  width: 1280px;
+  height: 1280px;
+  margin: 0 auto;
+  background-image: url(../../../resources/images/pattern/common/product2.jpg);
+}
+
 .slide-intro .swiper-slide {
   position: relative;
 }
