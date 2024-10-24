@@ -3844,10 +3844,55 @@ input[type=checkbox] {
   left: 0;
 }
 
-footer {
-  background-color: rgba(231, 110, 37, 0.7);
+#footer {
+  background-color: rgba(231, 110, 37, 0.8);
   width: 100%;
-  height: 25rem;
+  height: 300px;
+}
+#footer .footerInner {
+  width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+#footer .footerInner .footer-logo {
+  width: 230px;
+  height: 50px;
+  margin-top: 30px;
+}
+#footer .footerInner .footer_wrap {
+  margin-top: 43px;
+  color: white;
+  font-size: 1.6rem;
+}
+#footer .footerInner .footer_wrap .footer-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 999px;
+  gap: 20px;
+}
+#footer .footerInner .footer_wrap .footer-details .single-footer-detail {
+  display: flex;
+  gap: 5px;
+}
+#footer .footerInner .footer_wrap .footer_wrapp2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+#footer .footerInner .footer_wrap .footer_wrapp2 .footer-section {
+  width: 50%;
+}
+#footer .footerInner .footer_wrap .footer_wrapp2 .footer-section .footer-social {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+#footer .footerInner .footer_wrap .familysiteInner {
+  position: absolute;
+  top: 50px;
+  right: 132px;
 }
 
 #to-top {
@@ -3932,50 +3977,51 @@ footer {
 
 /* bg-video */
 .container {
-  border: 1px solid #f00;
   width: 1280px;
   height: 100%;
   margin: 0 auto;
   position: relative;
+  /* .product-second {
+    display: block;
+    content: "";
+    width: 200px;
+    height: 300px;
+    background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
+  } */
 }
 .container .section-img {
   text-align: center;
 }
-.container .section-content .section-contentInner {
+.container .section-content {
+  position: relative;
   margin: 0 auto;
 }
-.container .section-content .section-contentInner .title {
+.container .section-content .title {
   font-family: "AlbraSansTRIAL-Medium";
   font-size: 8.75rem;
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 135px;
 }
-.container .section-content .section-contentInner .txt {
+.container .section-content .txt {
   font-family: "Noto Sans KR";
   margin-top: 4px;
 }
-.container .section-content .section-contentInner .txt__descMain {
+.container .section-content .txt__descMain {
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 0%;
   line-height: auto;
+  margin: 8px 0;
 }
-.container .section-content .section-contentInner .txt__descSub {
+.container .section-content .txt__descSub {
   margin-top: 19px;
   font-size: 1.3rem;
 }
-.container .section-content .section-contentInner .txt__price {
+.container .section-content .txt__price {
   margin-top: 8px;
   color: #666;
   font-size: 1.2rem;
-}
-.container .mainProduct {
-  width: 693px;
-  height: 727px;
-  margin: 0 auto;
-  background-image: url(../../../resources/images/pattern/common/자음생크림3.png);
-  background-position: 50% 50%;
 }
 .container .mainTxt {
   width: 1280px;
@@ -3983,13 +4029,6 @@ footer {
 }
 .container .cream_video {
   width: 470px;
-}
-.container .mainProduct2 {
-  width: 420px;
-  height: 840px;
-  margin: 0 auto;
-  margin-top: 185px;
-  background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
 }
 .container .mainTxt__sub {
   font-family: "Noto Sans KR";
@@ -4000,6 +4039,37 @@ footer {
 }
 .container .item ul {
   display: flex;
+}
+.container .item ul li a .stagger {
+  line-height: 20px;
+  letter-spacing: 1.1px;
+  margin: 25px 0px 30px 0px;
+  padding: 0px 30px 0px 0px;
+}
+.container .item ul li a .stagger .product-line {
+  display: block;
+  margin: 0px 0px 10px;
+  color: #999;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.container .item ul li a .stagger .product-description {
+  display: block;
+  color: #666;
+  margin: 0px 0px 10px;
+}
+.container .item ul li a .stagger .product-price {
+  display: block;
+  margin: 8px 0px 0px;
+  color: #333;
+}
+
+.product-second::before {
+  content: "";
+  display: block;
+  width: 100%; /* 크기 설정 */
+  height: 1000px; /* 크기 설정 */
+  background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
 }
 
 .heritage {
@@ -4016,35 +4086,40 @@ footer {
   font-family: "QTWeise-Bold";
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #111;
 }
 .heritage__inner .heritage__body {
   width: 600px;
   margin-top: 13px;
+  line-height: 25px;
   font-size: 1.5rem;
   font-family: "Noto Sans KR";
   color: #454545;
   letter-spacing: 0.6px;
 }
 
-.products {
-  width: 1280px;
-  height: 1280px;
-  margin: 0 auto;
-  background-image: url(../../../resources/images/pattern/common/product2.jpg);
+.collection {
+  margin-bottom: 50px;
 }
-
+.collection::before {
+  content: "";
+  display: block;
+  width: 1280px;
+  height: 311px;
+  background: url(../../../resources/images/pattern/common/collection1.png) no-repeat center;
+}
 .collection__products2 {
   display: inline-block;
   width: 980px;
   font-family: "QTWeise-Bold";
   font-size: 14.26rem;
-  margin-left: 28px;
+  margin: 68px 0 68px 28px;
 }
 .collection__viewMore {
   font-family: "Noto Sans KR";
   font-size: 3rem;
   margin-right: 25px;
+  font-weight: 800;
 }
 
 .slide-intro .swiper-slide {
