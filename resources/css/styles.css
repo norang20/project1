@@ -3850,6 +3850,23 @@ footer {
   height: 25rem;
 }
 
+#to-top {
+  position: fixed;
+  bottom: 20px;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background: #c6c6c6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: none;
+}
+
 :root {
   --swiper-theme-color: red;
 }
@@ -3934,6 +3951,25 @@ footer {
   letter-spacing: 3px;
   line-height: 135px;
 }
+.container .section-content .section-contentInner .txt {
+  font-family: "Noto Sans KR";
+  margin-top: 4px;
+}
+.container .section-content .section-contentInner .txt__descMain {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0%;
+  line-height: auto;
+}
+.container .section-content .section-contentInner .txt__descSub {
+  margin-top: 19px;
+  font-size: 1.3rem;
+}
+.container .section-content .section-contentInner .txt__price {
+  margin-top: 8px;
+  color: #666;
+  font-size: 1.2rem;
+}
 .container .mainProduct {
   width: 693px;
   height: 727px;
@@ -3971,6 +4007,7 @@ footer {
   flex-flow: row wrap;
   width: 100%;
   height: 600px;
+  margin-top: 22px;
 }
 .heritage__inner {
   padding: 43px 18px;
@@ -3984,7 +4021,7 @@ footer {
 .heritage__inner .heritage__body {
   width: 600px;
   margin-top: 13px;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-family: "Noto Sans KR";
   color: #454545;
   letter-spacing: 0.6px;
@@ -3995,6 +4032,19 @@ footer {
   height: 1280px;
   margin: 0 auto;
   background-image: url(../../../resources/images/pattern/common/product2.jpg);
+}
+
+.collection__products2 {
+  display: inline-block;
+  width: 980px;
+  font-family: "QTWeise-Bold";
+  font-size: 14.26rem;
+  margin-left: 28px;
+}
+.collection__viewMore {
+  font-family: "Noto Sans KR";
+  font-size: 3rem;
+  margin-right: 25px;
 }
 
 .slide-intro .swiper-slide {
