@@ -4140,4 +4140,30 @@ footer {
 }
 .slide-studio .swiper-pagination {
   bottom: -50px;
+}
+
+.track {
+  display: flex;
+  overflow-x: hidden;
+  padding: 25px 0;
+}
+
+.content {
+  animation-name: main-marquee-ani;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  white-space: nowrap;
+  font-family: "QTWeise-Bold";
+  font-size: 44rem;
+}
+
+@keyframes main-marquee-ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=styles.css.map */
