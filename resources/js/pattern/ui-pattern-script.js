@@ -36,5 +36,3 @@ $("#nav-all > .gnb__depth1 > li ").mouseenter(function () {
 $("#nav-all > .gnb__depth1 > li ").mouseleave(function () {
   $(this).find(".gnb__depth2").stop().slideUp(200);
 });
-
-cibsik;
