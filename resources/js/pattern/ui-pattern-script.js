@@ -29,3 +29,12 @@ $(".lang__lst li").click(function () {
 //#to-top 눌렀을 때 상단으로 이동하기
 const topBtn = document.querySelector("#to-top");
 console.log(topBtn);
+$("#nav-all > .gnb__depth1 > li ").mouseenter(function () {
+  $(this).find(".gnb__depth2").stop().slideDown(200);
+});
+
+$("#nav-all > .gnb__depth1 > li ").mouseleave(function () {
+  $(this).find(".gnb__depth2").stop().slideUp(200);
+});
+
+cibsik;
