@@ -55,9 +55,16 @@
   opacity: 0.15;
 
   &__content {
-    height: 100%;
     width: 100%;
-    object-fit: cover; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
+    height: 100vh;
+    transform-origin: center;
+    object-fit: cover;
+    object-position: 48% 39%;
+    @include tabletMore {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
+    }
   }
 } /* bg-video */
 .container {
@@ -65,23 +72,31 @@
   height: 100%;
   margin: 0 auto;
   position: relative;
+  @include mobile {
+    width: 100%;
+  }
   .section-img {
     text-align: center;
+    margin: 30px 0;
   }
   .section-content {
     position: relative;
-
     margin: 0 auto;
     .title {
-      font-family: "Kablammo", system-ui;
+      font-family: "AlbraSansTRIAL-Medium";
       font-size: 8.75rem;
       font-weight: bold;
       letter-spacing: 3px;
       line-height: 135px;
+
+      @include mobile {
+        font-size: 4.125rem;
+        line-height: 4.125rem;
+      }
     }
     .txt {
       font-family: "Noto Sans KR";
-      margin-top: 4px;
+      margin: 4px 0 50px 0;
       &__descMain {
         font-weight: bold;
         font-size: 2rem;
@@ -100,6 +115,24 @@
       }
     }
   }
+
+  .product-second {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%; /* 크기 설정 */
+      height: 100vh; /* 크기 설정 */
+      background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
+      /* 기본 배경 크기 설정 */
+    }
+
+    /* 모바일 뷰에서 배경 크기 줄이기 */
+    @include mobile {
+      &::before {
+        background-size: 50% auto; /* 너비를 50%로 줄이고 높이는 자동 조정 */
+      }
+    }
+  }
   .mainTxt {
     width: 1280px;
     height: 446px;
@@ -115,41 +148,49 @@
     height: 300px;
     background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
   } */
+
   .mainTxt__sub {
     font-family: "Noto Sans KR";
     color: #ddd;
   }
-  .yunjo_video {
-    width: 100%;
-  }
+}
 
-  .item {
-    ul {
-      display: flex;
+.item {
+  ul {
+    display: flex;
+    @include mobile {
+      width: 100%;
+      flex-wrap: wrap;
       li {
-        a {
-          .stagger {
-            line-height: 20px;
-            letter-spacing: 1.1px;
-            margin: 25px 0px 30px 0px;
-            padding: 0px 30px 0px 0px;
-            .product-line {
-              display: block;
-              margin: 0px 0px 10px;
-              color: #999;
-              font-size: 1.3rem;
-              font-weight: bold;
-            }
-            .product-description {
-              display: block;
-              color: #666;
-              margin: 0px 0px 10px;
-            }
-            .product-price {
-              display: block;
-              margin: 8px 0px 0px;
-              color: #333;
-            }
+        width: 50%;
+      }
+    }
+    li {
+      a {
+        .stagger {
+          line-height: 20px;
+          letter-spacing: 1.1px;
+          margin: 25px 0px 30px 0px;
+          padding: 0px 30px 0px 0px;
+          @include mobile {
+            text-align: center;
+          }
+          .product-line {
+            display: block;
+            margin: 0px 0px 10px;
+            color: #999;
+            font-size: 1.3rem;
+            font-weight: bold;
+          }
+          .product-description {
+            display: block;
+            color: #666;
+            margin: 0px 0px 10px;
+          }
+          .product-price {
+            display: block;
+            margin: 8px 0px 0px;
+            color: #333;
           }
         }
       }
@@ -157,23 +198,26 @@
   }
 }
 
-.product-second {
-  &::before {
-    content: "";
-    display: block;
-    width: 100%; /* 크기 설정 */
-    height: 1000px; /* 크기 설정 */
-    background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
+.video {
+  .yunjo_video {
+    width: 100%;
   }
 }
 .heritage {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  height: 600px;
+  height: 100%;
   margin-top: 22px;
+  @include mobile {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   &__inner {
     padding: 43px 18px;
+    @include mobile {
+      width: 100%;
+    }
     .heritage__title {
       font-family: "QTWeise-Bold";
       font-size: 2.5rem;
@@ -188,6 +232,10 @@
       font-family: "Noto Sans KR";
       color: #454545;
       letter-spacing: 0.6px;
+      @include mobile {
+        width: 100%;
+        margin-top: 8px;
+      }
     }
   }
 }
@@ -201,18 +249,36 @@
     height: 311px;
     background: url(../../../resources/images/pattern/common/collection1.png) no-repeat center;
   }
+  @include mobile {
+    &::before {
+      width: 100vw;
+    }
+  }
+
   &__products2 {
     display: inline-block;
     width: 980px;
     font-family: "QTWeise-Bold";
     font-size: 14.26rem;
     margin: 68px 0 68px 28px;
+    @include mobile {
+      font-size: 9rem;
+      margin: 40px 0 30px 28px;
+    }
   }
   &__viewMore {
     font-family: "Noto Sans KR";
     font-size: 3rem;
     margin-right: 25px;
     font-weight: 800;
+    @include mobile {
+      display: block;
+      width: 100%;
+      margin-left: 30px;
+      .fa-circle-right {
+        display: none;
+      }
+    }
   }
 }
 
@@ -334,6 +400,9 @@
   white-space: nowrap;
   font-family: "QTWeise-Bold";
   font-size: 44rem;
+  @include mobile {
+    font-size: 10rem;
+  }
 }
 
 @keyframes main-marquee-ani {

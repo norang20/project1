@@ -24,6 +24,7 @@
   }
 }
 
+/* 1024px 이상 일때 */
 @mixin tabletMore {
   @media (min-width: $breakpoint-md) {
     @content;

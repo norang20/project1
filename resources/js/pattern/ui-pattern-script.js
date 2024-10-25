@@ -25,3 +25,7 @@ $(".lang__btn").click(function () {
 $(".lang__lst li").click(function () {
   $(".lang__lst").hide();
 });
+
+//#to-top 눌렀을 때 상단으로 이동하기
+const topBtn = document.querySelector("#to-top");
+console.log(topBtn);

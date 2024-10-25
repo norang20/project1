@@ -403,6 +403,7 @@
   font-weight: normal;
   font-style: normal;
 }
+/* 1024px 이상 일때 */
 /* **** area mixin ****/
 /* **** text attr ****/
 /* **** scroll ****/
@@ -3595,6 +3596,17 @@ input[type=checkbox] {
 #header {
   position: relative;
   z-index: 1000;
+  /* &::before {
+    content: "";
+    // display: none;
+    position: absolute;
+    top: 102px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: rgba($color: #000000, $alpha: 0.7);
+    transition: all 0.3s;
+  } */
 }
 #header.active::before {
   height: 218px;
@@ -3602,16 +3614,6 @@ input[type=checkbox] {
 #header.active .gnb__depth2 {
   height: 218px;
   padding: 30px 0;
-}
-#header::before {
-  content: "";
-  position: absolute;
-  top: 102px;
-  left: 0;
-  right: 0;
-  height: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: all 0.3s;
 }
 #header .inner {
   display: flex;
@@ -3642,18 +3644,17 @@ input[type=checkbox] {
   display: block;
   width: 200px;
   height: 35px;
-  background: url("../../images/pattern/common/sulwhasoo_orange_logo.jpeg") no-repeat 0 0;
 }
-#header #logo span {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+#header #logo a img {
+  width: 50%;
+  height: 50%;
+}
+@media (min-width: 1024px) {
+  #header #logo a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #gnb {
@@ -3806,12 +3807,14 @@ input[type=checkbox] {
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3.8rem;
+  color: white;
 }
 .util .all-menu::before {
   content: "\f0c9";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3.8rem;
+  color: white;
 }
 
 #nav-all {
@@ -3830,17 +3833,43 @@ input[type=checkbox] {
   display: block;
   left: 0;
 }
+#nav-all .gnb__depth1 {
+  display: flex;
+  flex-direction: column;
+}
+#nav-all .gnb__depth1 li a span {
+  display: inline-block;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+}
+#nav-all .gnb__depth1 li a span:hover {
+  font-weight: bold;
+}
+#nav-all .gnb__depth1 li .gnb__depth2 {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
 
 #footer {
   background-color: rgba(231, 110, 37, 0.8);
   width: 100%;
-  height: 300px;
 }
 #footer .footerInner {
   width: 1280px;
   margin: 0 auto;
   margin-bottom: 50px;
   position: relative;
+}
+@media (max-width: 599px) {
+  #footer .footerInner {
+    padding: 10px 50px;
+  }
+  #footer .footerInner .footer-details {
+    flex-direction: column;
+  }
 }
 #footer .footerInner .footer-logo {
   width: 230px;
@@ -3850,7 +3879,7 @@ input[type=checkbox] {
 #footer .footerInner .footer_wrap {
   margin-top: 43px;
   color: white;
-  font-size: 1.6rem;
+  font-size: 12px;
 }
 #footer .footerInner .footer_wrap .footer-details {
   display: flex;
@@ -3868,21 +3897,35 @@ input[type=checkbox] {
   justify-content: space-between;
   margin: 50px 0;
 }
+@media (max-width: 599px) {
+  #footer .footerInner .footer_wrap .footer_wrapp2 {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
 #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section {
   width: 50%;
 }
 #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section .footer-social {
   display: flex;
   width: 80%;
+  font-size: 13px;
   justify-content: space-between;
 }
-#footer .footerInner .footer_wrap .familysiteInner {
+@media (max-width: 599px) {
+  #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section .footer-social {
+    flex-direction: column;
+  }
+}
+#footer .footerInner .footer_wrap .footer_wrapp2 .familysiteInner {
   position: absolute;
   top: 50px;
   right: 132px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
 }
-
-#to-top {
+#footer #to-top {
   position: fixed;
   bottom: 20px;
   right: -50px;
@@ -3956,10 +3999,21 @@ input[type=checkbox] {
   opacity: 0.15;
 }
 .bg-video__content {
-  height: 100%;
   width: 100%;
+  height: 100vh;
+  transform-origin: center;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 48% 39%;
+     object-position: 48% 39%;
+}
+@media (min-width: 1024px) {
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 /* bg-video */
@@ -3976,23 +4030,35 @@ input[type=checkbox] {
     background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
   } */
 }
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+  }
+}
 .container .section-img {
   text-align: center;
+  margin: 30px 0;
 }
 .container .section-content {
   position: relative;
   margin: 0 auto;
 }
 .container .section-content .title {
-  font-family: "Kablammo", system-ui;
+  font-family: "AlbraSansTRIAL-Medium";
   font-size: 8.75rem;
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 135px;
 }
+@media (max-width: 599px) {
+  .container .section-content .title {
+    font-size: 4.125rem;
+    line-height: 4.125rem;
+  }
+}
 .container .section-content .txt {
   font-family: "Noto Sans KR";
-  margin-top: 4px;
+  margin: 4px 0 50px 0;
 }
 .container .section-content .txt__descMain {
   font-weight: bold;
@@ -4010,6 +4076,22 @@ input[type=checkbox] {
   color: #666;
   font-size: 1.2rem;
 }
+.container .product-second {
+  /* 모바일 뷰에서 배경 크기 줄이기 */
+}
+.container .product-second::before {
+  content: "";
+  display: block;
+  width: 100%; /* 크기 설정 */
+  height: 100vh; /* 크기 설정 */
+  background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
+  /* 기본 배경 크기 설정 */
+}
+@media (max-width: 599px) {
+  .container .product-second::before {
+    background-size: 50% auto; /* 너비를 50%로 줄이고 높이는 자동 조정 */
+  }
+}
 .container .mainTxt {
   width: 1280px;
   height: 446px;
@@ -4021,53 +4103,72 @@ input[type=checkbox] {
   font-family: "Noto Sans KR";
   color: #ddd;
 }
-.container .yunjo_video {
-  width: 100%;
-}
-.container .item ul {
+
+.item ul {
   display: flex;
 }
-.container .item ul li a .stagger {
+@media (max-width: 599px) {
+  .item ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .item ul li {
+    width: 50%;
+  }
+}
+.item ul li a .stagger {
   line-height: 20px;
   letter-spacing: 1.1px;
   margin: 25px 0px 30px 0px;
   padding: 0px 30px 0px 0px;
 }
-.container .item ul li a .stagger .product-line {
+@media (max-width: 599px) {
+  .item ul li a .stagger {
+    text-align: center;
+  }
+}
+.item ul li a .stagger .product-line {
   display: block;
   margin: 0px 0px 10px;
   color: #999;
   font-size: 1.3rem;
   font-weight: bold;
 }
-.container .item ul li a .stagger .product-description {
+.item ul li a .stagger .product-description {
   display: block;
   color: #666;
   margin: 0px 0px 10px;
 }
-.container .item ul li a .stagger .product-price {
+.item ul li a .stagger .product-price {
   display: block;
   margin: 8px 0px 0px;
   color: #333;
 }
 
-.product-second::before {
-  content: "";
-  display: block;
-  width: 100%; /* 크기 설정 */
-  height: 1000px; /* 크기 설정 */
-  background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
+.video .yunjo_video {
+  width: 100%;
 }
 
 .heritage {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  height: 600px;
+  height: 100%;
   margin-top: 22px;
+}
+@media (max-width: 599px) {
+  .heritage {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 .heritage__inner {
   padding: 43px 18px;
+}
+@media (max-width: 599px) {
+  .heritage__inner {
+    width: 100%;
+  }
 }
 .heritage__inner .heritage__title {
   font-family: "QTWeise-Bold";
@@ -4084,6 +4185,12 @@ input[type=checkbox] {
   color: #454545;
   letter-spacing: 0.6px;
 }
+@media (max-width: 599px) {
+  .heritage__inner .heritage__body {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
 
 .collection {
   margin-bottom: 50px;
@@ -4095,6 +4202,11 @@ input[type=checkbox] {
   height: 311px;
   background: url(../../../resources/images/pattern/common/collection1.png) no-repeat center;
 }
+@media (max-width: 599px) {
+  .collection::before {
+    width: 100vw;
+  }
+}
 .collection__products2 {
   display: inline-block;
   width: 980px;
@@ -4102,11 +4214,27 @@ input[type=checkbox] {
   font-size: 14.26rem;
   margin: 68px 0 68px 28px;
 }
+@media (max-width: 599px) {
+  .collection__products2 {
+    font-size: 9rem;
+    margin: 40px 0 30px 28px;
+  }
+}
 .collection__viewMore {
   font-family: "Noto Sans KR";
   font-size: 3rem;
   margin-right: 25px;
   font-weight: 800;
+}
+@media (max-width: 599px) {
+  .collection__viewMore {
+    display: block;
+    width: 100%;
+    margin-left: 30px;
+  }
+  .collection__viewMore .fa-circle-right {
+    display: none;
+  }
 }
 
 .slide-intro .swiper-slide {
@@ -4219,6 +4347,11 @@ input[type=checkbox] {
   white-space: nowrap;
   font-family: "QTWeise-Bold";
   font-size: 44rem;
+}
+@media (max-width: 599px) {
+  .content {
+    font-size: 10rem;
+  }
 }
 
 @keyframes main-marquee-ani {
