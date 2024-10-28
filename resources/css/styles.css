@@ -368,26 +368,8 @@
 }
 
 @font-face {
-  font-family: "AlbraSansTRIAL-Bold";
-  src: url("../../../resources/fonts/AlbraSansTRIAL-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "AlbraGroteskTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraGroteskTRIAL-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "AlbraTextTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraTextTRIAL-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "AlbraSansTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraSansTRIAL-Medium.woff") format("woff");
+  src: url("../../images/pattern/common/AlbraSansTRIAL-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
