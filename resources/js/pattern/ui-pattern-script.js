@@ -1,7 +1,7 @@
 AOS.init();
 // .all-menu 를 클릭했을 때
 // #nav-all 에게 .active 클래스를 추가한다.
-
+$();
 $(".all-menu").click(function () {
   $("#nav-all").addClass("active");
 });
@@ -48,3 +48,9 @@ $(".close").click(function () {
     top: "-300px", // 모달을 숨길 위치로 설정
   });
 });
+
+$(".familysite").click(function () {
+  $(this).siblings(".familysite__lst").find("li").toggleClass("active");
+});
+
+/* include 스크립트 적용 안됨*/

@@ -3939,7 +3939,7 @@ input[type=checkbox] {
 #footer {
   background-color: rgba(231, 110, 37, 0.8);
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 #footer .footerInner {
   width: 1280px;
@@ -3971,13 +3971,18 @@ input[type=checkbox] {
 }
 @media (max-width: 599px) {
   #footer .footerInner .footer_wrap .footer-details {
-    width: 400px;
-    gap: 8px;
+    width: 320px;
+    gap: 15px;
   }
 }
 #footer .footerInner .footer_wrap .footer-details .single-footer-detail {
   display: flex;
   gap: 5px;
+}
+@media (max-width: 599px) {
+  #footer .footerInner .footer_wrap .footer-details .single-footer-detail {
+    flex-wrap: wrap;
+  }
 }
 #footer .footerInner .footer_wrap .footer_wrapp2 {
   width: 100%;
@@ -3989,7 +3994,7 @@ input[type=checkbox] {
   #footer .footerInner .footer_wrap .footer_wrapp2 {
     flex-direction: column;
     gap: 24px;
-    margin: 0;
+    margin: 33px 0;
   }
 }
 #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section {
@@ -4011,21 +4016,21 @@ input[type=checkbox] {
   top: 40px;
   right: 129px;
 }
-#footer .footerInner .footer_wrap .familysiteInner__lst {
+#footer .footerInner .footer_wrap .familysiteInner .familysiteInner__lst {
   background-color: #fff;
   margin-top: 5px;
 }
-#footer .footerInner .footer_wrap .familysiteInner__lst li {
+#footer .footerInner .footer_wrap .familysiteInner .familysiteInner__lst li {
   display: none;
   width: 100%;
   padding: 2px 15px;
   line-height: 30px;
   border: 1px solid #e4e4e4;
 }
-#footer .footerInner .footer_wrap .familysiteInner__lst li.active {
+#footer .footerInner .footer_wrap .familysiteInner .familysiteInner__lst li.active {
   display: block;
 }
-#footer .footerInner .footer_wrap .familysiteInner__lst li a {
+#footer .footerInner .footer_wrap .familysiteInner .familysiteInner__lst li a {
   display: inline-block;
   width: 100%;
   color: #333;
@@ -4136,7 +4141,7 @@ input[type=checkbox] {
   display: flex;
 }
 .container .modal-search .search form input[type=search] {
-  flex: 5;
+  flex: 3;
   padding: 15px;
   padding-left: 30px;
   border: none;
@@ -4163,6 +4168,7 @@ input[type=checkbox] {
   flex: 1;
   padding: 15px;
   border: none;
+  margin-left: 5px;
   opacity: 0.7;
   cursor: pointer;
   transition: opacity 0.3s;
@@ -4379,16 +4385,14 @@ input[type=checkbox] {
 }
 
 .collection__products2 {
-  display: inline-block;
-  width: 980px;
   font-family: "QTWeise-Bold";
   font-size: 14.26rem;
   margin: 68px 0 68px 28px;
 }
 @media (max-width: 599px) {
   .collection__products2 {
-    font-size: 9rem;
-    margin: 40px 0 30px 28px;
+    font-size: 5.9rem;
+    margin: 30px 0 20px 28px;
   }
 }
 

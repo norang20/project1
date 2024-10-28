@@ -34,9 +34,9 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/throttle@1.0.3/throttle.min.js"></script>
     <script defer src="../resources/js/pattern/ui-swiper.js"></script>
-    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
     <script defer src="../resources/js/include.js"></script>
     <script defer src="../resources/js/pattern/gsap.js"></script>
+    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
   </head>
   <body>
     <div id="skip-nav">
@@ -141,7 +141,7 @@
         </nav>
       </header>
       <div class="intro">
-        <video class="bg-video__content" autoplay muted loop>
+        <video class="bg-video__content" controls playsinline autoplay muted loop>
           <source src="../resources/images/pattern/common/자음생크림.mp4" type="video/mp4" />
         </video>
       </div>
@@ -171,7 +171,7 @@
           </div>
         </section>
         <section class="section-product">
-          <video class="cream_video" autoplay muted loop>
+          <video class="cream_video" controls playsinline autoplay muted loop>
             <source src="../resources/images/pattern/common/자음생크림_main.mp4" type="video/mp4" />
           </video>
           <div class="section-content product-second">
@@ -193,7 +193,7 @@
           </div>
         </section>
         <section class="video">
-          <video class="yunjo_video" autoplay muted loop>
+          <video class="yunjo_video" controls playsinline autoplay muted loop>
             <source src="../resources/images/pattern/common/윤조에센스.mp4" type="video/mp4" />
           </video>
         </section>
@@ -368,7 +368,7 @@
           <div class="search">
             <form name="searchForm" id="searchForm" method="get">
               <input type="search" id="search-box" placeholder="궁금한 제품을 검색하세요" />
-              <input type="submit" value="검색하기" />
+              <input type="submit" value="검색" />
             </form>
           </div>
         </div>

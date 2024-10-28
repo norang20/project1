@@ -68,7 +68,7 @@
       form {
         display: flex;
         input[type="search"] {
-          flex: 5;
+          flex: 3;
           padding: 15px;
           padding-left: 30px;
           border: none;
@@ -87,7 +87,7 @@
           flex: 1;
           padding: 15px;
           border: none;
-
+          margin-left: 5px;
           opacity: 0.7;
           cursor: pointer;
           transition: opacity 0.3s;
@@ -301,14 +301,12 @@
   }
 }
 .collection__products2 {
-  display: inline-block;
-  width: 980px;
   font-family: "QTWeise-Bold";
   font-size: 14.26rem;
   margin: 68px 0 68px 28px;
   @include mobile {
-    font-size: 9rem;
-    margin: 40px 0 30px 28px;
+    font-size: 5.9rem;
+    margin: 30px 0 20px 28px;
   }
 }
 .collection__viewMore {
