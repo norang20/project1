@@ -4058,87 +4058,6 @@ input[type=checkbox] {
   --swiper-theme-color: red;
 }
 
-.modal-search {
-  width: 100%;
-  height: 300px;
-  position: fixed;
-  top: -300px;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s;
-}
-.modal-search.active {
-  top: 0;
-}
-.modal-search .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.modal-search .close i {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.modal-search .search {
-  width: 500px;
-  position: relative;
-}
-.modal-search .search form {
-  display: flex;
-}
-.modal-search .search form input[type=search] {
-  flex: 5;
-  padding: 15px;
-  padding-left: 30px;
-  border: none;
-}
-.modal-search .search form input[type=search]::-moz-placeholder {
-  opacity: 1;
-  -moz-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-.modal-search .search form input[type=search]::placeholder {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-.modal-search .search form input[type=search]:focus {
-  outline: none;
-}
-.modal-search .search form input[type=search]:focus::-moz-placeholder {
-  opacity: 0;
-}
-.modal-search .search form input[type=search]:focus::placeholder {
-  opacity: 0;
-}
-.modal-search .search form input[type=submit] {
-  flex: 1;
-  padding: 15px;
-  border: none;
-  opacity: 0.7;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-.modal-search .search form input[type=submit]:hover {
-  opacity: 1;
-}
-.modal-search .search::before {
-  content: "\f002";
-  font-family: "fontawesome";
-  position: absolute;
-  top: 22%;
-  left: 8px;
-  font-size: 1.2rem;
-}
-.modal-search .search .hash-tag {
-  font-size: 1.1rem;
-  margin-top: 6px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -4172,6 +4091,7 @@ input[type=checkbox] {
   height: 100%;
   margin: 0 auto;
   position: relative;
+  /* modal-search */
 }
 @media (max-width: 599px) {
   .container {
@@ -4182,6 +4102,87 @@ input[type=checkbox] {
   .container {
     width: 100%;
   }
+}
+.container .modal-search {
+  width: 100%;
+  height: 300px;
+  position: fixed;
+  background-color: rgba(228, 228, 228, 0.8);
+  top: -300;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.container .modal-search.active {
+  top: 0;
+}
+.container .modal-search .close {
+  position: absolute;
+  top: 100px;
+  right: 80px;
+}
+.container .modal-search .close i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.container .modal-search .search {
+  width: 500px;
+  position: relative;
+}
+.container .modal-search .search form {
+  display: flex;
+}
+.container .modal-search .search form input[type=search] {
+  flex: 5;
+  padding: 15px;
+  padding-left: 30px;
+  border: none;
+}
+.container .modal-search .search form input[type=search]::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.container .modal-search .search form input[type=search]::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.container .modal-search .search form input[type=search]:focus {
+  outline: none;
+}
+.container .modal-search .search form input[type=search]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.container .modal-search .search form input[type=search]:focus::placeholder {
+  opacity: 0;
+}
+.container .modal-search .search form input[type=submit] {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.container .modal-search .search form input[type=submit]:hover {
+  opacity: 1;
+}
+.container .modal-search .search::before {
+  content: "\f002";
+  font-family: "fontawesome";
+  position: absolute;
+  top: 22%;
+  left: 8px;
+  font-size: 1.2rem;
+}
+.container .modal-search .search .hash-tag {
+  font-size: 1.1rem;
+  margin-top: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .container .section-img {
   text-align: center;
@@ -4198,12 +4199,14 @@ input[type=checkbox] {
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .section-content .title {
+    padding: 10px 30px;
     font-size: 7.125rem;
     line-height: 7.125rem;
   }
 }
 @media (max-width: 599px) {
   .container .section-content .title {
+    padding: 10px 10px;
     font-size: 4.125rem;
     line-height: 4.125rem;
   }
@@ -4211,6 +4214,16 @@ input[type=checkbox] {
 .container .section-content .txt {
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container .section-content .txt {
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .container .section-content .txt {
+    padding: 10px 10px;
+  }
 }
 .container .section-content .txt__descMain {
   font-weight: bold;
@@ -4233,7 +4246,7 @@ input[type=checkbox] {
 }
 .container .product-second img {
   display: block;
-  margin: 85px auto;
+  margin: 42px auto;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .product-second {
@@ -4267,18 +4280,10 @@ input[type=checkbox] {
   .item ul {
     width: 100%;
     flex-wrap: wrap;
+    padding: 0 10px;
   }
   .item ul li {
     width: 50%;
-  }
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  .item ul {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .item ul li {
-    width: 30%;
   }
 }
 .item ul li a .stagger {
@@ -4403,103 +4408,17 @@ input[type=checkbox] {
     display: none;
   }
 }
-
-.slide-intro .swiper-slide {
-  position: relative;
-}
-.slide-intro .swiper-slide.swiper-slide-active .text-area {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-.slide-intro .swiper-slide img {
-  -o-object-position: 50% 100%;
-     object-position: 50% 100%;
-}
-.slide-intro .swiper-slide .text-area {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 70%;
-  max-width: 400px;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.slide-intro .swiper-slide .text-area__tit {
-  font-size: 3rem;
-  color: #1d1d1d;
-  font-family: "GmarketSansMedium";
-  font-weight: 500;
-}
-.slide-intro .swiper-slide .text-area__cont {
-  color: #555555;
-}
-.slide-intro .swiper-slide .text-area__goto {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 7px 20px;
-  background: #246beb;
-  color: #fff;
-}
-.slide-intro .swiper-slide img {
-  height: 50vh;
-}
-.slide-intro .swiper-pagination {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .slide-intro .swiper-slide img {
-    height: 70vh;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .slide-intro .swiper-slide img {
-    height: 90vh;
-  }
-  .slide-intro .swiper-slide .text-area {
-    width: 100%;
-    max-width: none;
-    text-align: left;
-  }
-  .slide-intro .swiper-slide .text-area__tit {
-    font-size: 6rem;
-  }
-  .slide-intro .swiper-slide .text-area__cont {
-    font-size: 2rem;
-  }
-  .slide-intro .swiper-slide .text-area__goto {
-    margin-top: 30px;
-  }
-  .slide-intro .swiper-pagination {
+@media (min-width: 600px) and (max-width: 1023px) {
+  .collection__viewMore {
     display: block;
-  }
-  .slide-intro .swiper-button-next,
-  .slide-intro .swiper-button-prev {
-    display: none;
-  }
-}
-.slide-studio {
-  overflow: visible;
-  width: 80%;
-  margin-left: 0;
-}
-@media (min-width: 600px) {
-  .slide-studio {
-    width: 90%;
-  }
-}
-@media (min-width: 1024px) {
-  .slide-studio {
     width: 100%;
-    margin-left: auto;
+    margin-left: 30px;
   }
-}
-.slide-studio .swiper-pagination {
-  bottom: -50px;
+  .collection__viewMore .fa-circle-right {
+    margin-left: 30px;
+  }
 }
 
-/* modal-search */
 .track {
   display: flex;
   overflow-x: hidden;

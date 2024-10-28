@@ -1,5 +1,7 @@
+AOS.init();
 // .all-menu 를 클릭했을 때
 // #nav-all 에게 .active 클래스를 추가한다.
+
 $(".all-menu").click(function () {
   $("#nav-all").addClass("active");
 });
@@ -27,12 +29,22 @@ $(".lang__lst li").click(function () {
 });
 
 //#to-top 눌렀을 때 상단으로 이동하기
-const topBtn = document.querySelector("#to-top");
-console.log(topBtn);
 $("#nav-all > .gnb__depth1 > li ").mouseenter(function () {
   $(this).find(".gnb__depth2").stop().slideDown(200);
 });
 
 $("#nav-all > .gnb__depth1 > li ").mouseleave(function () {
   $(this).find(".gnb__depth2").stop().slideUp(200);
+});
+
+$(".util > .search").click(function () {
+  $(".modal-search").css({
+    top: "0",
+  });
+});
+
+$(".close").click(function () {
+  $(".modal-search").css({
+    top: "-300px", // 모달을 숨길 위치로 설정
+  });
 });

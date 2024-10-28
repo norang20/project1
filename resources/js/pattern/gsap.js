@@ -40,10 +40,3 @@ window.addEventListener(
     }
   })
 );
-
-gsap.to(".title,.txt", {
-  scrollTrigger: ".title",
-  x: "13%",
-
-  duration: 2,
-});
