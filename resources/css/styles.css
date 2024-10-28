@@ -4058,47 +4058,85 @@ input[type=checkbox] {
   --swiper-theme-color: red;
 }
 
-.swiper {
+.modal-search {
   width: 100%;
-  height: 100%;
-}
-.swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  height: 300px;
+  position: fixed;
+  top: -300px;
+  left: 0;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
 }
-.swiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.modal-search.active {
+  top: 0;
 }
-.swiper .swiper-slide a {
-  display: block;
-  width: 100%;
-  height: 100%;
+.modal-search .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-.swiper .swiper-button-next::after,
-.swiper .swiper-button-prev::after {
-  display: none;
+.modal-search .close i {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-.swiper .swiper-button-next::before,
-.swiper .swiper-button-prev::before {
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 3rem;
-  color: #000;
-  opacity: 0.5;
+.modal-search .search {
+  width: 500px;
+  position: relative;
 }
-.swiper .swiper-button-next::before {
-  content: "\f138";
+.modal-search .search form {
+  display: flex;
 }
-.swiper .swiper-button-prev::before {
-  content: "\f137";
+.modal-search .search form input[type=search] {
+  flex: 5;
+  padding: 15px;
+  padding-left: 30px;
+  border: none;
+}
+.modal-search .search form input[type=search]::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.modal-search .search form input[type=search]::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.modal-search .search form input[type=search]:focus {
+  outline: none;
+}
+.modal-search .search form input[type=search]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.modal-search .search form input[type=search]:focus::placeholder {
+  opacity: 0;
+}
+.modal-search .search form input[type=submit] {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.modal-search .search form input[type=submit]:hover {
+  opacity: 1;
+}
+.modal-search .search::before {
+  content: "\f002";
+  font-family: "fontawesome";
+  position: absolute;
+  top: 22%;
+  left: 8px;
+  font-size: 1.2rem;
+}
+.modal-search .search .hash-tag {
+  font-size: 1.1rem;
+  margin-top: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .bg-video {
@@ -4134,26 +4172,22 @@ input[type=checkbox] {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  /* .product-second {
-    display: block;
-    content: "";
-    width: 200px;
-    height: 300px;
-    background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/cover/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png);
-  } */
 }
 @media (max-width: 599px) {
   .container {
     width: 100%;
   }
 }
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+  }
+}
 .container .section-img {
   text-align: center;
-  margin: 30px 0;
 }
 .container .section-content {
   position: relative;
-  margin: 0 auto;
 }
 .container .section-content .title {
   font-family: "AlbraSansTRIAL-Medium";
@@ -4161,6 +4195,12 @@ input[type=checkbox] {
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 135px;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container .section-content .title {
+    font-size: 7.125rem;
+    line-height: 7.125rem;
+  }
 }
 @media (max-width: 599px) {
   .container .section-content .title {
@@ -4191,17 +4231,21 @@ input[type=checkbox] {
 .container .product-second {
   /* 모바일 뷰에서 배경 크기 줄이기 */
 }
-.container .product-second::before {
-  content: "";
+.container .product-second img {
   display: block;
-  width: 100%; /* 크기 설정 */
-  height: 100vh; /* 크기 설정 */
-  background: url("../images/pattern/common/first_care_activating_serum_vi_feature02_img_pc_kr_240213.png") no-repeat center;
-  /* 기본 배경 크기 설정 */
+  margin: 85px auto;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container .product-second {
+    /* 600px 이상 1024px 이하일 경우 */
+  }
+  .container .product-second img {
+    width: 40%;
+  }
 }
 @media (max-width: 599px) {
-  .container .product-second::before {
-    background-size: 50% auto; /* 너비를 50%로 줄이고 높이는 자동 조정 */
+  .container .product-second img {
+    width: 50%;
   }
 }
 .container .mainTxt {
@@ -4226,6 +4270,15 @@ input[type=checkbox] {
   }
   .item ul li {
     width: 50%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .item ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .item ul li {
+    width: 30%;
   }
 }
 .item ul li a .stagger {
@@ -4268,12 +4321,6 @@ input[type=checkbox] {
   height: 100%;
   margin-top: 22px;
 }
-@media (max-width: 599px) {
-  .heritage {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-}
 .heritage__inner {
   padding: 43px 18px;
 }
@@ -4303,6 +4350,12 @@ input[type=checkbox] {
     margin-top: 8px;
   }
 }
+@media (min-width: 600px) and (max-width: 1023px) {
+  .heritage__inner .heritage__body {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
 
 .collection {
   margin-bottom: 50px;
@@ -4319,6 +4372,7 @@ input[type=checkbox] {
     width: 100vw;
   }
 }
+
 .collection__products2 {
   display: inline-block;
   width: 980px;
@@ -4332,6 +4386,7 @@ input[type=checkbox] {
     margin: 40px 0 30px 28px;
   }
 }
+
 .collection__viewMore {
   font-family: "Noto Sans KR";
   font-size: 3rem;
@@ -4444,6 +4499,7 @@ input[type=checkbox] {
   bottom: -50px;
 }
 
+/* modal-search */
 .track {
   display: flex;
   overflow-x: hidden;
