@@ -239,13 +239,12 @@
 .util {
   display: flex;
   gap: 15px;
+
   .lang {
-    display: none;
+    display: block;
 
     position: relative;
-    @include tabletMore {
-      display: block;
-    }
+
     &.active {
       .lang__btn::after {
         content: "\f106";
@@ -253,6 +252,9 @@
       }
       .lang__lst {
         display: block;
+        @include mobile {
+          display: none;
+        }
       }
     }
     &__btn {
@@ -261,6 +263,9 @@
       margin-right: 10px;
       font-size: 2rem;
       text-transform: uppercase;
+      @include mobile {
+        display: none;
+      }
       &::after {
         content: "\f107";
         @include lineAwesome;
@@ -446,7 +451,7 @@
 #footer {
   background-color: rgba(231, 110, 37, 0.8);
   width: 100%;
-  height: 400px;
+  height: 350px;
   .footerInner {
     width: 1280px;
     margin: 0 auto;
@@ -455,6 +460,9 @@
 
     @include mobile {
       margin: 10px 16px;
+    }
+    @include tablet {
+      margin: 10px 20px;
     }
     .footer-logo {
       margin-top: 30px;
@@ -531,8 +539,8 @@
           }
         }
         @include mobile {
-          top: 29px;
-          right: 28px;
+          top: 85px;
+          left: 28%;
         }
       }
     }

@@ -49,8 +49,4 @@ $(".close").click(function () {
   });
 });
 
-$(".familysite").click(function () {
-  $(this).siblings(".familysite__lst").find("li").toggleClass("active");
-});
-
 /* include 스크립트 적용 안됨*/
