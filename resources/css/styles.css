@@ -369,37 +369,37 @@
 
 @font-face {
   font-family: "AlbraSansTRIAL-Bold";
-  src: url("../../../resources/fonts/AlbraSansTRIAL-Bold.woff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/AlbraSansTRIAL-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AlbraGroteskTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraGroteskTRIAL-Medium.woff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/AlbraGroteskTRIAL-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AlbraTextTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraTextTRIAL-Medium.woff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/AlbraTextTRIAL-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AlbraSansTRIAL-Medium";
-  src: url("../../../resources/fonts/AlbraSansTRIAL-Medium.woff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/AlbraSansTRIAL-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "QTWeise-Bold";
-  src: url("../../../resources/fonts/QTWeise-Bold.woff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/QTWeise-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "QTWeise";
-  src: url("../../../resources/fonts/QTWeisewoff") format("woff");
+  src: url("https://to-flatwhite1.github.io/project1/resources/fonts/QTWeisewoff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -3795,9 +3795,13 @@ input[type=checkbox] {
 .util .lang__lst li {
   padding: 5px 0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .util .lang__lst li:first-child {
   border-bottom: 1px solid #c6c6c6;
+}
+.util .lang__lst li:hover {
+  background-color: #e4e4e4;
 }
 .util .search {
   transform: scaleX(-1);
@@ -3949,13 +3953,10 @@ input[type=checkbox] {
 }
 @media (max-width: 599px) {
   #footer .footerInner {
-    padding: 10px 50px;
-    width: 100%;
+    margin: 10px 16px;
   }
 }
 #footer .footerInner .footer-logo {
-  width: 230px;
-  height: 50px;
   margin-top: 30px;
 }
 #footer .footerInner .footer_wrap {
@@ -3998,7 +3999,7 @@ input[type=checkbox] {
   }
 }
 #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section {
-  width: 50%;
+  width: 30%;
 }
 #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section .footer-social {
   display: flex;
@@ -4008,7 +4009,7 @@ input[type=checkbox] {
 }
 @media (max-width: 599px) {
   #footer .footerInner .footer_wrap .footer_wrapp2 .footer-section .footer-social {
-    gap: 38px;
+    /* gap: 38px; */
   }
 }
 #footer .footerInner .footer_wrap .familysiteInner {
@@ -4099,6 +4100,16 @@ input[type=checkbox] {
   /* modal-search */
 }
 @media (max-width: 599px) {
+  .container .section-product {
+    margin: 0 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container .section-product {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 599px) {
   .container {
     width: 100%;
   }
@@ -4126,8 +4137,8 @@ input[type=checkbox] {
 }
 .container .modal-search .close {
   position: absolute;
-  top: 100px;
-  right: 80px;
+  top: 90px;
+  right: 3%;
 }
 .container .modal-search .close i {
   font-size: 1.5rem;
@@ -4144,6 +4155,7 @@ input[type=checkbox] {
   flex: 3;
   padding: 15px;
   padding-left: 30px;
+  margin-left: 17px;
   border: none;
 }
 .container .modal-search .search form input[type=search]::-moz-placeholder {
@@ -4175,13 +4187,14 @@ input[type=checkbox] {
 }
 .container .modal-search .search form input[type=submit]:hover {
   opacity: 1;
+  font-weight: bold;
 }
 .container .modal-search .search::before {
   content: "\f002";
   font-family: "fontawesome";
   position: absolute;
-  top: 22%;
-  left: 8px;
+  top: 15%;
+  left: 29px;
   font-size: 1.2rem;
 }
 .container .modal-search .search .hash-tag {
@@ -4205,31 +4218,19 @@ input[type=checkbox] {
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .section-content .title {
-    padding: 10px 30px;
     font-size: 7.125rem;
-    line-height: 7.125rem;
+    line-height: 9.125rem;
   }
 }
 @media (max-width: 599px) {
   .container .section-content .title {
-    padding: 10px 10px;
     font-size: 4.125rem;
-    line-height: 4.125rem;
+    line-height: 5.1rem;
   }
 }
 .container .section-content .txt {
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  .container .section-content .txt {
-    padding: 10px 30px;
-  }
-}
-@media (max-width: 599px) {
-  .container .section-content .txt {
-    padding: 10px 10px;
-  }
 }
 .container .section-content .txt__descMain {
   font-weight: bold;
@@ -4243,7 +4244,7 @@ input[type=checkbox] {
   font-size: 1.3rem;
 }
 .container .section-content .txt__price {
-  margin-top: 8px;
+  margin-top: 12px;
   color: #666;
   font-size: 1.2rem;
 }
@@ -4252,7 +4253,7 @@ input[type=checkbox] {
 }
 .container .product-second img {
   display: block;
-  margin: 42px auto;
+  margin: 48px auto;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .product-second {
@@ -4272,13 +4273,23 @@ input[type=checkbox] {
   height: 446px;
 }
 .container .cream_video {
-  width: 470px;
+  width: 50%;
 }
 .container .mainTxt__sub {
   font-family: "Noto Sans KR";
   color: #ddd;
 }
 
+@media (max-width: 599px) {
+  .item {
+    margin: 0 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .item {
+    margin: 0 20px;
+  }
+}
 .item ul {
   display: flex;
 }
@@ -4286,38 +4297,38 @@ input[type=checkbox] {
   .item ul {
     width: 100%;
     flex-wrap: wrap;
-    padding: 0 10px;
   }
   .item ul li {
     width: 50%;
   }
 }
+.item ul li {
+  font-family: "Noto Sans KR", sans-serif;
+}
 .item ul li a .stagger {
   line-height: 20px;
   letter-spacing: 1.1px;
-  margin: 25px 0px 30px 0px;
+  margin: 18px 0px 30px 0px;
   padding: 0px 30px 0px 0px;
-}
-@media (max-width: 599px) {
-  .item ul li a .stagger {
-    text-align: center;
-  }
+  margin-left: 13px;
 }
 .item ul li a .stagger .product-line {
   display: block;
   margin: 0px 0px 10px;
   color: #999;
-  font-size: 1.3rem;
+  font-size: 1.63rem;
   font-weight: bold;
 }
 .item ul li a .stagger .product-description {
   display: block;
   color: #666;
+  font-size: 1.63rem;
   margin: 0px 0px 10px;
 }
 .item ul li a .stagger .product-price {
   display: block;
   margin: 8px 0px 0px;
+  font-size: 1.3rem;
   color: #333;
 }
 
@@ -4332,8 +4343,20 @@ input[type=checkbox] {
   height: 100%;
   margin-top: 22px;
 }
+@media (max-width: 599px) {
+  .heritage {
+    width: 100%;
+    margin: 0 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .heritage {
+    width: 100%;
+    margin: 0 20px;
+  }
+}
 .heritage__inner {
-  padding: 43px 18px;
+  padding: 43px 0;
 }
 @media (max-width: 599px) {
   .heritage__inner {
@@ -4370,56 +4393,64 @@ input[type=checkbox] {
 
 .collection {
   margin-bottom: 50px;
+  width: 100%;
 }
-.collection::before {
-  content: "";
+.collection img {
   display: block;
-  width: 1280px;
-  height: 311px;
-  background: url(../../../resources/images/pattern/common/collection1.png) no-repeat center;
+  margin: 0 auto;
 }
 @media (max-width: 599px) {
-  .collection::before {
+  .collection img {
+    margin-top: 30px;
+    width: 90vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .collection {
     width: 100vw;
+    padding: 0 30px;
   }
 }
 
 .collection__products2 {
   font-family: "QTWeise-Bold";
   font-size: 14.26rem;
-  margin: 68px 0 68px 28px;
+  margin: 40px 0 0 0px;
+  position: relative;
 }
 @media (max-width: 599px) {
   .collection__products2 {
     font-size: 5.9rem;
-    margin: 30px 0 20px 28px;
+    margin: 30px 0 20px 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .collection__products2 {
+    font-size: 7.9rem;
+    margin: 30px 0 20px 20px;
   }
 }
 
 .collection__viewMore {
   font-family: "Noto Sans KR";
-  font-size: 3rem;
-  margin-right: 25px;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 19px;
+  cursor: pointer;
 }
 @media (max-width: 599px) {
   .collection__viewMore {
     display: block;
     width: 100%;
-    margin-left: 30px;
-  }
-  .collection__viewMore .fa-circle-right {
-    display: none;
+    margin: 0 16px;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .collection__viewMore {
     display: block;
     width: 100%;
-    margin-left: 30px;
-  }
-  .collection__viewMore .fa-circle-right {
-    margin-left: 30px;
+    margin: 25px 20px;
   }
 }
 
@@ -4452,4 +4483,5 @@ input[type=checkbox] {
   100% {
     transform: translateX(-100%);
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/* 서브페이지여도 content.scss에 이름 다르게 같이 다 넣기 *//*# sourceMappingURL=styles.css.map */

@@ -280,8 +280,12 @@
       li {
         padding: 5px 0;
         text-transform: uppercase;
+        cursor: pointer;
         &:first-child {
           border-bottom: 1px solid $gray-40;
+        }
+        &:hover {
+          background-color: $gray-20;
         }
       }
     }
@@ -450,12 +454,9 @@
     position: relative;
 
     @include mobile {
-      padding: 10px 50px;
-      width: 100%;
+      margin: 10px 16px;
     }
     .footer-logo {
-      width: 230px;
-      height: 50px;
       margin-top: 30px;
     }
     .footer_wrap {
@@ -492,14 +493,14 @@
           margin: 33px 0;
         }
         .footer-section {
-          width: 50%;
+          width: 30%;
           .footer-social {
             display: flex;
             width: 80%;
             font-size: 13px;
             justify-content: space-between;
             @include mobile {
-              gap: 38px;
+              /* gap: 38px; */
             }
           }
         }
