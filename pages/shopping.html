@@ -26,115 +26,120 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- gsap -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/throttle@1.0.3/throttle.min.js"></script>
     <script defer src="../resources/js/pattern/ui-swiper.js"></script>
-    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
     <script defer src="../resources/js/include.js"></script>
     <script defer src="../resources/js/pattern/gsap.js"></script>
+    <script defer src="../resources/js/pattern/ui-pattern-subscript.js"></script>
   </head>
   <body>
     <header id="header" class="">
       <div class="inner">
         <h1 id="logo">
-          <a href="#">
+          <a href="index.html">
             <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="설화수로고" />
           </a>
         </h1>
-        <nav id="gnb" class="gnb">
-          <ul class="gnb__depth1">
-            <li>
-              <a href="#">
+        <nav class="sub_gnb">
+          <ul class="gnb__depth1 sub_gnb__depth1">
+            <li class="sub">
+              <a href="shopping.html">
                 <span>Products</span>
               </a>
             </li>
-            <li>
+            <li class="sub">
               <a href="#"><span>Heritage</span></a>
             </li>
           </ul>
         </nav>
-        <div class="util">
+        <div class="sub_util">
           <!-- active 추가시 활성화 -->
-          <div class="lang">
-            <button class="lang__btn">kor</button>
-            <ul class="lang__lst">
+          <div class="lang sub_lang">
+            <button class="sub_lang__btn">kor</button>
+            <ul class="sub_lang__lst">
               <li>kor</li>
               <li>eng</li>
             </ul>
           </div>
-          <button class="search">
+          <button class="subSearch">
             <span class="blind">검색</span>
           </button>
-          <button class="all-menu">
+          <button class="subAll-menu">
             <span class="blind">전체메뉴</span>
           </button>
         </div>
       </div>
       <!-- active 추가시 활성화 -->
-      <nav id="nav-all" class="">
-        <a href="">
-          <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="" />
-        </a>
-        <ul class="gnb__depth1">
-          <span class="nav-all-title">Products</span>
-          <li>
-            <a href="#">
-              <span>전체</span>
-            </a>
-            <ul class="gnb__depth2">
-              <li><a href="#">menu1-2</a></li>
-              <li><a href="#">menu1-2</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><span>라인별</span></a>
-            <ul class="gnb__depth2">
-              <li><a href="#">menu2-1</a></li>
-              <li><a href="#">menu2-2</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><span>유형별</span></a>
-            <ul class="gnb__depth2">
-              <li><a href="#">menu3-1</a></li>
-              <li><a href="#">menu3-2</a></li>
-            </ul>
-          </li>
-        </ul>
-        <button class="close">
-          <i class="fa-solid fa-xmark fa-xl"></i>
-        </button>
-        <div class="nav-all-right">
-          <ul>
-            <span>story</span>
+      <nav id="sub-nav-all">
+        <div class="inner">
+          <a href="">
+            <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="" />
+          </a>
+          <ul class="gnb__depth1">
+            <span class="nav-all-title">Products</span>
             <li>
-              <a href="#">Heritage</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <ul class="footer-social">
-            <li>
-              <a href="https://www.youtube.com/user/sulwhasookorea" target="_blank">
-                <i class="fa-brands fa-youtube fa-xl"></i>
+              <a href="#">
+                <span>전체</span>
               </a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu1-2</a></li>
+                <li><a href="#">menu1-2</a></li>
+              </ul>
             </li>
             <li>
-              <a href="https://www.instagram.com/sulwhasoo.official/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              <a href="#"><span>라인별</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+              </ul>
             </li>
             <li>
-              <a href="https://www.facebook.com/sulwhasoo.official/?locale=ko_KR" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+              <a href="#"><span>유형별</span></a>
+              <ul class="gnb__depth2">
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+              </ul>
             </li>
           </ul>
+          <button class="close">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </button>
+          <div class="nav-all-right">
+            <ul>
+              <span>story</span>
+              <li>
+                <a href="#">Heritage</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <ul class="footer-social">
+              <li>
+                <a href="https://www.youtube.com/user/sulwhasookorea" target="_blank">
+                  <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sulwhasoo.official/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/sulwhasoo.official/?locale=ko_KR" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
     <main class="container">
       <section class="collection">
         <h2 class="collection__products2">All Products</h2>
-        <p>수많은 피부 경험을 기반으로 60년 인삼과학의 정수, 자생력으로 차오른 고밀도 설화수의 모든 제품을 만나보세요.</p>
+        <p class="collection__des">수많은 피부 경험을 기반으로 60년 인삼과학의 정수, 자생력으로 차오른 고밀도 설화수의 모든 제품을 만나보세요.</p>
       </section>
       <section class="shopping_item">
         <ul class="shopping_item__lst">
@@ -250,13 +255,14 @@
           </li>
           <li>
             <a href="#">
-              <img src="../resources/images/pattern/common/shopping_final_Ultimate-Serum_pdp_thumb_50ml_640x640-removebg-preview.png" alt="자음생캡슐세럼" />
+              <img src="../resources/images/pattern/common/shopping_final_Ultimate-Serum_pdp_thumb_50ml_640x640-removebg-preview.png" alt="진설세럼" />
               <div class="product_inner">
                 <strong class="product-description">진설세럼<br /> </strong>
-                <span class="product-description__eng">The Ultimate S Serum</span>
-                <span class="product-price">450,000원</span>
+                <span class="product-description_eng">The Ultimate S Serum<br /></span>
+                <span class="product-price">450,000원<br /></span>
                 <span class="product-size">50ml<br /></span>
                 <span class="purchase">구매하러가기</span>
+                <span class="category">new</span>
               </div>
             </a>
           </li>
@@ -265,10 +271,11 @@
               <img src="../resources/images/pattern/common/shopping_final_TUS_Cream_Refill_pdp_thumb_640x640_60ml-removebg-preview.png" alt="자음크림 리필 " />
               <div class="product_inner">
                 <strong class="product-description">자음크림 리필<br /> </strong>
-                <span class="product-description__eng">The Ultimate S Cream Refill</span>
-                <span class="product-price">470,000원</span>
+                <span class="product-description_eng">The Ultimate S Cream Refill<br /></span>
+                <span class="product-price">470,000원<br /></span>
                 <span class="product-size">60ml<br /></span>
                 <span class="purchase">구매하러가기</span>
+                <span class="category">new</span>
               </div>
             </a>
           </li>
@@ -279,7 +286,7 @@
                 <strong class="product-description">윤조에센스 6세대<br /> </strong>
                 <span class="product-description_eng">First Care Activating Serum VI<br /></span>
                 <span class="product-price">55,000원 3size<br /></span>
-                <span class="product-size"><strong>30ml</strong>60ml 90ml<br /></span>
+                <span class="product-size"><strong>30ml</strong>&nbsp;60ml 90ml<br /></span>
                 <span class="purchase">구매하러가기</span>
                 <span class="category">best</span>
               </div>
@@ -287,6 +294,17 @@
           </li>
         </ul>
       </section>
+      <div class="modal-search">
+        <div class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="search">
+          <form name="searchForm" id="searchForm" method="get">
+            <input type="search" id="search-box" placeholder="궁금한 제품을 검색하세요" />
+            <input type="submit" value="검색" />
+          </form>
+        </div>
+      </div>
     </main>
     <footer id="footer" include-html="./layout/footer.html"></footer>
     <button id="to-top" onclick="window.scrollTo(0,0)">top</button>
