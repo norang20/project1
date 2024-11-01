@@ -1,3 +1,7 @@
+AOS.init({
+  duration: 1200,
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 var tl = gsap.timeline({
@@ -40,3 +44,15 @@ window.addEventListener(
     }
   })
 );
+
+gsap.to(".section-contentInner", {
+  scrollTrigger: {
+    trigger: ".section-contentInner", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+    start: "-200% top", // 애니메이션 시작시점
+    end: "bottom 10%", // 애니메이션 종료시점
+    scrub: 2,
+    markers: true, // 트리거 마커의 표시(boolean)
+  },
+  x: 150,
+  duration: 1,
+});

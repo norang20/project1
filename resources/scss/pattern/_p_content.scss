@@ -125,17 +125,18 @@
   }
   .section {
     width: 100%;
-    height: 100%;
-    @include mobile {
-      height: 100vh;
-    }
-    .section-img {
+    height: 100vh;
+    .section-img,
+    .section-img2 {
       text-align: center;
       @include mobile {
         .yunjoimg {
           width: 50%;
         }
       }
+    }
+    .section-img2 {
+      position: relative;
     }
     .section-content {
       .section-contentInner {
@@ -156,6 +157,51 @@
           }
         }
         .txt {
+          font-family: "Noto Sans KR";
+          margin: 4px 0 50px 0;
+
+          &__descMain {
+            font-weight: bold;
+            font-size: 2rem;
+            letter-spacing: 0%;
+            line-height: auto;
+            margin: 8px 0;
+          }
+          &__descSub {
+            margin-top: 19px;
+            font-size: 1.3rem;
+          }
+          &__price {
+            margin-top: 12px;
+            color: #666;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .section-contentInner2 {
+        margin: 20px 22px;
+        .title2 {
+          position: absolute;
+          top: 16%;
+          font-family: "AlbraSansTRIAL-Medium";
+          font-size: 8.75rem;
+          font-weight: bold;
+          letter-spacing: 3px;
+          line-height: 135px;
+
+          @include tablet {
+            font-size: 7.125rem;
+            line-height: 9.125rem;
+          }
+          @include mobile {
+            font-size: 4.125rem;
+            line-height: 5.1rem;
+          }
+        }
+        .txt {
+          position: absolute;
+          top: 26%;
+          right: 5%;
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
 
@@ -406,7 +452,7 @@
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      margin-left: 30px;
+      margin-left: 26px;
     }
     @include tablet {
       flex-wrap: wrap;
