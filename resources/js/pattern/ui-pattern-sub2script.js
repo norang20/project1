@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }, */
     },
   });
-  tl.to("typo span", { alpha: 0, duration: 1 });
+
+  tl.to(".typo ", { alpha: 1, duration: 1 });
   tl.to(".bg", { height: "0", duration: 1 });
   tl.to(".typo01", { y: 0, duration: 1, delay: -1 });
   tl.to(".typo02", { y: 0, duration: 1, delay: -1 });

@@ -42,7 +42,7 @@ gsap.to(".section-contentInner", {
     end: "bottom 10%", // 애니메이션 종료시점
     scrub: 2,
     pin: false,
-    markers: true, // 트리거 마커의 표시(boolean)
+    /* markers: true, */ // 트리거 마커의 표시(boolean)
   },
   y: -150,
   duration: 1,
