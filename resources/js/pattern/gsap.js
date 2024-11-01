@@ -4,17 +4,6 @@ AOS.init({
 
 gsap.registerPlugin(ScrollTrigger);
 
-var tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".intro",
-    pin: true,
-    start: "top 0",
-    end: "+=500",
-    scrub: 1,
-    // markers: true,
-  },
-});
-
 //윈도우가 스크롤 됐을 때
 window.addEventListener(
   "scroll",
@@ -51,6 +40,7 @@ gsap.to(".section-contentInner", {
     start: "-200% top", // 애니메이션 시작시점
     end: "bottom 10%", // 애니메이션 종료시점
     scrub: 2,
+    pin: false,
     markers: true, // 트리거 마커의 표시(boolean)
   },
   x: 150,

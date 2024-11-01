@@ -2,251 +2,351 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>krds</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
-    <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
-    <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="페이지 제목" />
-    <meta name="twitter:description" content="페이지 설명" />
-    <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
-    <meta name="twitter:domain" content="사이트 명" />
-    <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="../resources/css/styles.css" />
-    <script src="https://kit.fontawesome.com/9d37948b2c.js" crossorigin="anonymous"></script>
-    <!-- font-awesome -->
-    <!-- js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- gsap -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/throttle@1.0.3/throttle.min.js"></script>
-    <script src="fullpage.min.js"></script>
-    <script defer src="../resources/js/pattern/ui-swiper.js"></script>
-    <script defer src="../resources/js/include.js"></script>
-    <script defer src="../resources/js/pattern/gsap.js"></script>
+    <title>GSAP Scroll Effect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <link href="https://websseu.github.io/fontkor/fonts/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      body {
+        color: #fff;
+        font-family: "NexonLv1Gothic";
+        font-weight: 300;
+        background-color: #111;
+      }
+      #parallax__title {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 1000;
+      }
+      #parallax__title h1 {
+        font-size: 30px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 400;
+        display: inline-block;
+      }
+      #parallax__title p {
+        font-size: 16px;
+      }
+      #parallax__title ul {
+        margin-top: 10px;
+      }
+      #parallax__title li {
+        display: inline;
+      }
+      #parallax__title li a {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px dashed #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+      #parallax__title li.active a {
+        background: #fff;
+        color: #000;
+      }
+      #parallax__nav {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 20px;
+        border-radius: 50px;
+      }
+      #parallax__nav li {
+        list-style: none;
+        display: inline;
+      }
+      #parallax__nav li a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        text-align: center;
+        line-height: 30px;
+      }
+      #parallax__nav li a.active {
+        background: #fff;
+        color: #000;
+        border-radius: 50%;
+      }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.js"></script>
-    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
-    <title>Document</title>
+      /* parallax__cont */
+      #parallax__cont {
+        max-width: 1600px;
+        width: 98%;
+        margin: 0 auto;
+      }
+      .parallax__item {
+        width: 1000px;
+        max-width: 70vw;
+        margin: 30vw auto;
+        text-align: left;
+        margin-right: 0;
+        position: relative;
+        padding-top: 15vw;
+      }
+      .parallax__item:nth-child(even) {
+        margin-left: 0;
+        text-align: right;
+      }
+      .parallax__item__num {
+        font-size: 35vw;
+        position: absolute;
+        left: -5vw;
+        top: -13vw;
+        opacity: 0.07;
+        font-family: "Lato";
+        font-weight: 100;
+      }
+      .parallax__item:nth-child(even) .parallax__item__num {
+        left: auto;
+        right: -5vw;
+      }
+      .parallax__item__title {
+        padding-bottom: 5px;
+        font-weight: 400;
+      }
+      .parallax__item__imgWrap {
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+      }
+      .parallax__item__img {
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: saturate(0%);
+        transition: all 1s;
+      }
+      .parallax__item__img:hover {
+        filter: saturate(100%);
+        transform: scale(1.025);
+      }
+      #section1 .parallax__item__img {
+        background-image: url(assets/img/images01@2.jpg);
+      }
+      #section2 .parallax__item__img {
+        background-image: url(assets/img/images02@2.jpg);
+      }
+      #section3 .parallax__item__img {
+        background-image: url(assets/img/images03@2.jpg);
+      }
+      #section4 .parallax__item__img {
+        background-image: url(assets/img/images04@2.jpg);
+      }
+      #section5 .parallax__item__img {
+        background-image: url(assets/img/images05@2.jpg);
+      }
+      #section6 .parallax__item__img {
+        background-image: url(assets/img/images06@2.jpg);
+      }
+      #section7 .parallax__item__img {
+        background-image: url(assets/img/images07@2.jpg);
+      }
+      #section8 .parallax__item__img {
+        background-image: url(assets/img/images08@2.jpg);
+      }
+      #section9 .parallax__item__img {
+        background-image: url(assets/img/images09@2.jpg);
+      }
+      .parallax__item__desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-top: -5vw;
+        margin-left: -4vw;
+        z-index: 100;
+        position: relative;
+      }
+      .parallax__item:nth-child(even) .parallax__item__desc {
+        margin-left: auto;
+        margin-right: -4vw;
+      }
+    </style>
   </head>
   <body>
-    <div id="fullpage">
-      <header id="header" class="">
-        <div class="inner">
-          <h1 id="logo">
-            <a href="#">
-              <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="설화수로고" />
-            </a>
-          </h1>
-          <nav id="gnb" class="gnb">
-            <ul class="gnb__depth1">
-              <li>
-                <a href="shopping.html">
-                  <span>Products</span>
-                </a>
-              </li>
-              <li>
-                <a href="#"><span>Heritage</span></a>
-              </li>
-            </ul>
-          </nav>
-          <div class="util">
-            <!-- active 추가시 활성화 -->
-            <div class="lang">
-              <button class="lang__btn">kor</button>
-              <ul class="lang__lst">
-                <li>kor</li>
-                <li>eng</li>
-              </ul>
-            </div>
-            <button class="search">
-              <span class="blind">검색</span>
-            </button>
-            <button class="all-menu">
-              <span class="blind">전체메뉴</span>
-            </button>
-          </div>
-        </div>
-        <!-- active 추가시 활성화 -->
-        <nav id="nav-all" class="">
-          <div class="inner">
-            <a href="">
-              <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="" />
-            </a>
-            <ul class="gnb__depth1">
-              <span class="nav-all-title">Products</span>
-              <li>
-                <a href="#">
-                  <span>전체</span>
-                </a>
-                <ul class="gnb__depth2">
-                  <li><a href="#">menu1-2</a></li>
-                  <li><a href="#">menu1-2</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>라인별</span></a>
-                <ul class="gnb__depth2">
-                  <li><a href="#">menu2-1</a></li>
-                  <li><a href="#">menu2-2</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><span>유형별</span></a>
-                <ul class="gnb__depth2">
-                  <li><a href="#">menu3-1</a></li>
-                  <li><a href="#">menu3-2</a></li>
-                </ul>
-              </li>
-            </ul>
-            <button class="close">
-              <i class="fa-solid fa-xmark fa-xl"></i>
-            </button>
-            <div class="nav-all-right">
-              <ul>
-                <span>story</span>
-                <li>
-                  <a href="#">Heritage</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-section">
-              <ul class="footer-social">
-                <li>
-                  <a href="https://www.youtube.com/user/sulwhasookorea" target="_blank">
-                    <i class="fa-brands fa-youtube fa-xl"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/sulwhasoo.official/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/sulwhasoo.official/?locale=ko_KR" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div class="section">
-        <div class="section-img">
-          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
-        </div>
-        <div class="section-content">
-          <div data-aos="fade-up" data-aos-duration="3000">
-            <div class="section-contentInner">
-              <h2 class="title">
-                Concentrated<br />
-                Rejuvenating<br />
-                Cream
-              </h2>
-              <div class="txt">
-                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
-                <p class="txt__descSub">
-                  수분과 영양이 피부 사이사이<br />
-                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
-                </p>
-                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-img">
-          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
-        </div>
-        <div class="section-content">
-          <div data-aos="fade-up" data-aos-duration="3000">
-            <div class="section-contentInner">
-              <h2 class="title">
-                Concentrated<br />
-                Rejuvenating<br />
-                Cream
-              </h2>
-              <div class="txt">
-                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
-                <p class="txt__descSub">
-                  수분과 영양이 피부 사이사이<br />
-                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
-                </p>
-                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-img">
-          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
-        </div>
-        <div class="section-content">
-          <div data-aos="fade-up" data-aos-duration="3000">
-            <div class="section-contentInner">
-              <h2 class="title">
-                Concentrated<br />
-                Rejuvenating<br />
-                Cream
-              </h2>
-              <div class="txt">
-                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
-                <p class="txt__descSub">
-                  수분과 영양이 피부 사이사이<br />
-                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
-                </p>
-                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-img">
-          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
-        </div>
-        <div class="section-content">
-          <div data-aos="fade-up" data-aos-duration="3000">
-            <div class="section-contentInner">
-              <h2 class="title">
-                Concentrated<br />
-                Rejuvenating<br />
-                Cream
-              </h2>
-              <div class="txt">
-                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
-                <p class="txt__descSub">
-                  수분과 영양이 피부 사이사이<br />
-                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
-                </p>
-                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <header id="parallax__title">
+      <h1>GSAP Parallax Effect09</h1>
+      <p>GSAP scrollTrigger - 메뉴 이동 효과</p>
+      <ul>
+        <li><a href="gsap01.html">1</a></li>
+        <li><a href="gsap02.html">2</a></li>
+        <li><a href="gsap03.html">3</a></li>
+        <li><a href="gsap04.html">4</a></li>
+        <li><a href="gsap05.html">5</a></li>
+        <li><a href="gsap06.html">6</a></li>
+        <li><a href="gsap07.html">7</a></li>
+        <li><a href="gsap08.html">8</a></li>
+        <li class="active"><a href="gsap09.html">9</a></li>
+        <li><a href="gsap10.html">10</a></li>
+        <li><a href="gsap11.html">11</a></li>
+        <li><a href="gsap12.html">12</a></li>
+        <li><a href="gsap13.html">13</a></li>
+        <li><a href="gsap14.html">14</a></li>
+        <li><a href="gsap15.html">15</a></li>
+      </ul>
+    </header>
+    <!-- //parallax__title  -->
+
+    <nav id="parallax__nav">
+      <ul>
+        <li><a href="#section1" class="active">s1</a></li>
+        <li><a href="#section2">s2</a></li>
+        <li><a href="#section3">s3</a></li>
+        <li><a href="#section4">s4</a></li>
+        <li><a href="#section5">s5</a></li>
+        <li><a href="#section6">s6</a></li>
+        <li><a href="#section7">s7</a></li>
+        <li><a href="#section8">s8</a></li>
+        <li><a href="#section9">s9</a></li>
+      </ul>
+    </nav>
+    <!-- //parallax__nav -->
+
+    <main id="parallax__cont">
+      <section id="section1" class="parallax__item">
+        <span class="parallax__item__num">01</span>
+        <h2 class="parallax__item__title">section1</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+      </section>
+      <!-- //section1 -->
+
+      <section id="section2" class="parallax__item">
+        <span class="parallax__item__num">02</span>
+        <h2 class="parallax__item__title">section2</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
+      </section>
+      <!-- //section2 -->
+
+      <section id="section3" class="parallax__item">
+        <span class="parallax__item__num">03</span>
+        <h2 class="parallax__item__title">section3</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p>
+      </section>
+      <!-- //section3 -->
+
+      <section id="section4" class="parallax__item">
+        <span class="parallax__item__num">04</span>
+        <h2 class="parallax__item__title">section4</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">모든 일에는 기본을 중요하게 생각한다.</p>
+      </section>
+      <!-- //section4 -->
+
+      <section id="section5" class="parallax__item">
+        <span class="parallax__item__num">05</span>
+        <h2 class="parallax__item__title">section5</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p>
+      </section>
+      <!-- //section5 -->
+
+      <section id="section6" class="parallax__item">
+        <span class="parallax__item__num">06</span>
+        <h2 class="parallax__item__title">section6</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">천 마디 말보단 하나의 행동이 더 값지다.</p>
+      </section>
+      <!-- //section6 -->
+
+      <section id="section7" class="parallax__item">
+        <span class="parallax__item__num">07</span>
+        <h2 class="parallax__item__title">section7</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p>
+      </section>
+      <!-- //section7 -->
+
+      <section id="section8" class="parallax__item">
+        <span class="parallax__item__num">08</span>
+        <h2 class="parallax__item__title">section8</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
+      </section>
+      <!-- //section8 -->
+
+      <section id="section9" class="parallax__item">
+        <span class="parallax__item__num">09</span>
+        <h2 class="parallax__item__title">section9</h2>
+        <figure class="parallax__item__imgWrap">
+          <div class="parallax__item__img"></div>
+        </figure>
+        <p class="parallax__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
+      </section>
+      <!-- //section9 -->
+    </main>
+
     <script>
-      new fullpage("#fullpage", {
-        // 옵션 설정
-        /*         sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE", "whitesmoke"] */ /* 각섹션의 배경색 */
-        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"] /* 각 세션의 앵커를 설정 */,
-        menu: "#header" /* 네비게이션 메뉴를 나태는 요소의 id 지정 */,
-        scrollingSpeed: 1000 /* 스크롤 속도 설정 */,
+      let links = gsap.utils.toArray("#parallax__nav ul li a");
+
+      links.forEach((link) => {
+        let element = document.querySelector(link.getAttribute("href"));
+        let linkST = ScrollTrigger.create({
+          trigger: element,
+          start: "top top",
+        });
+
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top center",
+          end: "bottom center",
+          onToggle: (self) => setActive(link),
+        });
+
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+        });
       });
+
+      function setActive(link) {
+        links.forEach((el) => el.classList.remove("active"));
+        link.classList.add("active");
+      }
     </script>
   </body>
 </html>
