@@ -39,3 +39,11 @@ $(".lang__lst li").click(function () {
 $(".lang__lst").mouseleave(function () {
   $(this).hide();
 });
+
+new fullpage("#fullpage", {
+  // 옵션 설정
+  /*         sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE", "whitesmoke"] */ /* 각섹션의 배경색 */
+  anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"] /* 각 세션의 앵커를 설정 */,
+  menu: "#header" /* 네비게이션 메뉴를 나태는 요소의 id 지정 */,
+  scrollingSpeed: 1000 /* 스크롤 속도 설정 */,
+});

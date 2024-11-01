@@ -4559,13 +4559,27 @@ input[type=checkbox] {
   opacity: 0;
   transition: opacity 0.3s;
 }
-.container .section-img {
+.container .section {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 599px) {
+  .container .section {
+    height: 100vh;
+  }
+}
+.container .section .section-img {
   text-align: center;
 }
-.container .section-content {
-  position: relative;
+@media (max-width: 599px) {
+  .container .section .section-img .yunjoimg {
+    width: 50%;
+  }
 }
-.container .section-content .title {
+.container .section .section-content .section-contentInner {
+  margin: 20px 22px;
+}
+.container .section .section-content .section-contentInner .title {
   font-family: "AlbraSansTRIAL-Medium";
   font-size: 8.75rem;
   font-weight: bold;
@@ -4573,63 +4587,43 @@ input[type=checkbox] {
   line-height: 135px;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
-  .container .section-content .title {
+  .container .section .section-content .section-contentInner .title {
     font-size: 7.125rem;
     line-height: 9.125rem;
   }
 }
 @media (max-width: 599px) {
-  .container .section-content .title {
+  .container .section .section-content .section-contentInner .title {
     font-size: 4.125rem;
     line-height: 5.1rem;
   }
 }
-.container .section-content .txt {
+.container .section .section-content .section-contentInner .txt {
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
 }
-.container .section-content .txt__descMain {
+.container .section .section-content .section-contentInner .txt__descMain {
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 0%;
   line-height: auto;
   margin: 8px 0;
 }
-.container .section-content .txt__descSub {
+.container .section .section-content .section-contentInner .txt__descSub {
   margin-top: 19px;
   font-size: 1.3rem;
 }
-.container .section-content .txt__price {
+.container .section .section-content .section-contentInner .txt__price {
   margin-top: 12px;
   color: #666;
   font-size: 1.2rem;
-}
-.container .product-second {
-  /* 모바일 뷰에서 배경 크기 줄이기 */
-}
-.container .product-second img {
-  display: block;
-  margin: 48px auto;
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  .container .product-second {
-    /* 600px 이상 1024px 이하일 경우 */
-  }
-  .container .product-second img {
-    width: 40%;
-  }
-}
-@media (max-width: 599px) {
-  .container .product-second img {
-    width: 50%;
-  }
 }
 .container .mainTxt {
   width: 1280px;
   height: 446px;
 }
 .container .cream_video {
-  width: 50%;
+  width: 43%;
   margin: 100px 0;
 }
 .container .mainTxt__sub {
@@ -4808,8 +4802,8 @@ input[type=checkbox] {
 @media (min-width: 1024px) {
   .collection__viewMore {
     position: absolute;
-    top: 70%;
-    right: 43px;
+    top: 65%;
+    right: 52px;
   }
 }
 @media (max-width: 599px) {

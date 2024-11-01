@@ -45,7 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: 1,
       pin: ".pin01",
       start: "top top",
-      end: "+=800%",
+      end: "+=500% -200%",
+      markers: {
+        startColor: "yellow",
+        endColor: "black",
+        fontSize: "4rem",
+        indent: 200,
+      },
     },
   });
   tl.to(".bg", { height: "0", duration: 1 });

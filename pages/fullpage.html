@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products | sulwhasoo</title>
+    <title>krds</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
@@ -25,103 +25,64 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- gsap -->
+    <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- aos -->
+    <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/throttle@1.0.3/throttle.min.js"></script>
+    <script src="fullpage.min.js"></script>
     <script defer src="../resources/js/pattern/ui-swiper.js"></script>
     <script defer src="../resources/js/include.js"></script>
     <script defer src="../resources/js/pattern/gsap.js"></script>
-    <script defer src="../resources/js/pattern/ui-pattern-sub2script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.js"></script>
+    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
+    <title>Document</title>
   </head>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <div class="story">
-      <div class="pin-spacer">
-        <div class="pin01">
-          <div class="inner">
-            <div class="typo">
-              <div class="typo01 fontC">sulwhasoo</div>
-              <div class="typo02 fontC"><span class="fontC">HERITAGE</span></div>
-            </div>
-            <div class="bg">
-              <img src="../resources/images/pattern/common/heritage_main.jpg" alt="Background Image" />
-            </div>
-          </div>
-          <div class="images">
-            <img src="../resources/images/pattern/common/301562516_PU95823.jpg" alt="Story Image 1" />
-            <img src="../resources/images/pattern/common/logo_옛날.PNG" alt="Story Image 2" />
-            <img src="../resources/images/pattern/common/설화수.jpg" alt="Story Image 4" />
-            <img src="../resources/images/pattern/common/rebranding.png" alt="Story Image 3" />
-            <img src="../resources/images/pattern/common/윤조에센스1.PNG" alt="Story Image 5" />
-            <img src="../resources/images/pattern/common/5c0d1117af5172ecba0b94da0602acd2.png" alt="Story Image 6" />
-            <img src="../resources/images/pattern/common/494585_254577_4216.jpg" alt="Story Image 6" />
-          </div>
-          <div class="rolling">
-            <div class="txt txt01">
-              <h3>BUILDING A WORLD OF BEAUTY POWERED BY ART AND HERITAGE<br /></h3>
-              <p>
-                예술과 헤리티지 정신으로 아름다움을 창조합니다. <br />
-                우리의 고유한 헤리티지와 독자적인 피부 과학을 동력으로 시간과 세대를 초월하는 예술 작품과도 같은 제품을 만들어 냅니다.<br />
-              </p>
-            </div>
-            <div class="txt txt02">
-              <h3>OUR PURPOSE</h3>
-              <p>세상 모든 사람들이 그들이 가진 헤리티지를 바탕으로 자신만의 아름다움을 만들 수 있도록 영감을 불어넣을 것입니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="skip-nav">
-      <a href="#gnb">메뉴 바로가기</a>
-      <a href="#container">본문 바로가기</a>
-    </div>
-    <div id="wrap">
-      <!-- active 추가시 depth2 활성화 -->
+    <div id="fullpage">
       <header id="header" class="">
         <div class="inner">
           <h1 id="logo">
-            <a href="index.html">
+            <a href="#">
               <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="설화수로고" />
             </a>
           </h1>
-          <nav class="sub_gnb">
-            <ul class="gnb__depth1 sub_gnb__depth1">
-              <li class="sub">
+          <nav id="gnb" class="gnb">
+            <ul class="gnb__depth1">
+              <li>
                 <a href="shopping.html">
                   <span>Products</span>
                 </a>
               </li>
-              <li class="sub">
+              <li>
                 <a href="#"><span>Heritage</span></a>
               </li>
             </ul>
           </nav>
-          <div class="sub_util">
+          <div class="util">
             <!-- active 추가시 활성화 -->
-            <div class="lang sub_lang">
-              <button class="sub_lang__btn">kor</button>
-              <ul class="sub_lang__lst">
+            <div class="lang">
+              <button class="lang__btn">kor</button>
+              <ul class="lang__lst">
                 <li>kor</li>
                 <li>eng</li>
               </ul>
             </div>
-            <button class="subSearch">
+            <button class="search">
               <span class="blind">검색</span>
             </button>
-            <button class="subAll-menu">
+            <button class="all-menu">
               <span class="blind">전체메뉴</span>
             </button>
           </div>
         </div>
         <!-- active 추가시 활성화 -->
-        <nav id="sub-nav-all">
+        <nav id="nav-all" class="">
           <div class="inner">
             <a href="">
               <img src="../resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg" alt="" />
@@ -181,30 +142,111 @@
           </div>
         </nav>
       </header>
-    </div>
-
-    <div class="slide">
-      <main id="container">
-        <h2>HERITAGE</h2>
-        <p>BUILDING A WORLD OF BEAUTY POWERED BY ART AND HERITAGE OUR PURPOSE</p>
-        <p>
-          예술과 헤리티지 정신으로 아름다움을 창조합니다. 우리의 고유한 헤리티지와 독자적인 피부 과학을 동력으로 시간과 세대를 초월하는 예술 작품과도 같은 제품을 만들어 냅니다.<br />
-          세상 모든 사람들이 그들이 가진 헤리티지를 바탕으로자신만의 아름다움을 만들 수 있도록 영감을 불어넣을 것입니다.
-        </p>
-        <div class="modal-search">
-          <div class="close">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-          <div class="search">
-            <form name="searchForm" id="searchForm" method="get">
-              <input type="search" id="search-box" placeholder="궁금한 제품을 검색하세요" />
-              <input type="submit" value="검색" />
-            </form>
+      <div class="section">
+        <div class="section-img">
+          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
+        </div>
+        <div class="section-content">
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="section-contentInner">
+              <h2 class="title">
+                Concentrated<br />
+                Rejuvenating<br />
+                Cream
+              </h2>
+              <div class="txt">
+                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
+                <p class="txt__descSub">
+                  수분과 영양이 피부 사이사이<br />
+                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
+                </p>
+                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
-
-      <footer id="footer" include-html="./layout/footer.html"></footer>
+      </div>
+      <div class="section">
+        <div class="section-img">
+          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
+        </div>
+        <div class="section-content">
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="section-contentInner">
+              <h2 class="title">
+                Concentrated<br />
+                Rejuvenating<br />
+                Cream
+              </h2>
+              <div class="txt">
+                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
+                <p class="txt__descSub">
+                  수분과 영양이 피부 사이사이<br />
+                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
+                </p>
+                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-img">
+          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
+        </div>
+        <div class="section-content">
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="section-contentInner">
+              <h2 class="title">
+                Concentrated<br />
+                Rejuvenating<br />
+                Cream
+              </h2>
+              <div class="txt">
+                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
+                <p class="txt__descSub">
+                  수분과 영양이 피부 사이사이<br />
+                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
+                </p>
+                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-img">
+          <img src="../resources/images/pattern/common/자음생크림3.png" alt="자음생크림" />
+        </div>
+        <div class="section-content">
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="section-contentInner">
+              <h2 class="title">
+                Concentrated<br />
+                Rejuvenating<br />
+                Cream
+              </h2>
+              <div class="txt">
+                <p class="txt__descMain">자생력으로 차오른 고밀도 피부</p>
+                <p class="txt__descSub">
+                  수분과 영양이 피부 사이사이<br />
+                  녹아들어 매끄러운 피부결로 가꿔주는 수분탄력 크림
+                </p>
+                <p class="txt__price">30ml 168,000원 50ml 270,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      new fullpage("#fullpage", {
+        // 옵션 설정
+        /*         sectionsColor: ["#f2f2f2", "#4BBFC3", "#7BAABE", "whitesmoke"] */ /* 각섹션의 배경색 */
+        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"] /* 각 세션의 앵커를 설정 */,
+        menu: "#header" /* 네비게이션 메뉴를 나태는 요소의 id 지정 */,
+        scrollingSpeed: 1000 /* 스크롤 속도 설정 */,
+      });
+    </script>
   </body>
 </html>
