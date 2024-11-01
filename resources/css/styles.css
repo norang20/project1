@@ -4932,7 +4932,6 @@ input[type=checkbox] {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-left: 26px;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -4941,16 +4940,15 @@ input[type=checkbox] {
   }
 }
 .shopping_item__lst li {
-  width: 409px;
+  width: 380px;
   height: 500px;
   background-color: rgba(228, 228, 228, 0.2);
   position: relative;
-  margin-right: 24px;
-  margin-bottom: 30px;
+  margin: 0px 20px 20px 0;
 }
 @media (max-width: 599px) {
   .shopping_item__lst li {
-    margin-right: 0;
+    margin: 0 3px 10px 0px;
   }
 }
 .shopping_item__lst li:nth-of-type(3n) {
