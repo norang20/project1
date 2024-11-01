@@ -35,8 +35,9 @@ window.addEventListener(
 );
 
 gsap.to(".section-contentInner", {
+  /* 움직임을 주고 싶을 요소 */
   scrollTrigger: {
-    trigger: ".section-contentInner", // 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
+    trigger: ".section-contentInner", // 움직임의 기준이 되는 요소 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
     start: "-200% top", // 애니메이션 시작시점
     end: "bottom 10%", // 애니메이션 종료시점
     scrub: 2,
