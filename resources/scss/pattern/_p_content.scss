@@ -560,12 +560,12 @@
 }
 
 .story .pin01 {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
 .story .typo {
-  font-size: 120px;
+  font-size: 7rem;
   line-height: 1;
   position: absolute;
   z-index: 1;
@@ -574,7 +574,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 400px;
+  gap: 300px;
 }
 
 .story .typo span {
@@ -585,7 +585,9 @@
 }
 
 .story .typo .typo01 {
-  transform: translateY(-220px);
+  transform: translateY(-185px);
+
+  /*  transform: translate3d(-76px, -175.999px, 0px); */
 }
 
 .story .typo .typo02 {
@@ -598,7 +600,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  height: 400px;
+  height: 500px;
   z-index: -3;
   border-radius: 20px;
   overflow: hidden;
@@ -610,21 +612,21 @@
   object-fit: cover;
 }
 
-.story .bg02 {
+/* .story .bg02 {
   width: 100%;
   height: 100vh;
   position: absolute;
   left: 0;
   top: 100%;
   z-index: -2;
-}
+} */
 
-.story .bg02 img {
+/* .story .bg02 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   max-width: 200px;
-}
+} */
 
 .images {
   width: 100%;
@@ -649,7 +651,7 @@
 
 .images > img:nth-child(2) {
   left: 20%;
-  top: 20%;
+  top: 5%;
 }
 
 .images > img:nth-child(3) {
@@ -672,15 +674,10 @@
   top: 70%;
 }
 
-.images > img:nth-child(7) {
-  left: 40%;
-  top: 90%;
-}
-
 .rolling {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   left: 0;
   top: 0;
 }
@@ -698,9 +695,9 @@
 }
 
 .rolling .txt h3 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.3;
+  font-family: "QTWeise-Bold";
+  font-size: 1.7rem;
+  color: #333;
 }
 
 .rolling .txt strong {
@@ -712,7 +709,8 @@
 }
 
 .rolling .txt p {
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 1.5rem;
 }
 
 .rolling .txt:after {
@@ -721,7 +719,6 @@
   height: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: url("/images/main/bullet.png") no-repeat center center / cover;
   position: absolute;
   left: 0;
   top: 10px;

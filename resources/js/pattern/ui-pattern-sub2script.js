@@ -45,22 +45,26 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: 1,
       pin: ".pin01",
       start: "top top",
-      end: "+=500% -200%",
-      markers: {
+      end: "+=500% ",
+      scrub: true,
+
+      /*  markers: {
         startColor: "yellow",
         endColor: "black",
         fontSize: "4rem",
         indent: 200,
-      },
+      }, */
     },
   });
+  tl.to("typo span", { alpha: 0, duration: 1 });
   tl.to(".bg", { height: "0", duration: 1 });
   tl.to(".typo01", { y: 0, duration: 1, delay: -1 });
   tl.to(".typo02", { y: 0, duration: 1, delay: -1 });
   tl.to(".typo span", { alpha: 0, duration: 1 });
   tl.to(".typo span", { width: 0, duration: 1 });
   tl.to(".typo", { gap: 0, duration: 1, delay: -1 });
-  tl.to(".typo", { width: "auto", y: 0, top: "36%", duration: 1 });
+  tl.to(".typo", { width: "auto", x: 280, y: 280, top: "13%", duration: 1 });
+
   tl.to(".bg02", { top: 0, duration: 1, delay: -1 });
   tl.to(".txt01", { alpha: 1, y: 0, duration: 1 });
   tl.to(".txt01", { alpha: 0, y: -40, duration: 1 });
