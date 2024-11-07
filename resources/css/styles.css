@@ -4447,6 +4447,7 @@ input[type=checkbox] {
 .container {
   width: 1280px;
   margin: 0 auto;
+  padding-top: 100px;
   position: relative;
   /* modal-search */
 }
@@ -4655,15 +4656,15 @@ input[type=checkbox] {
 }
 .container .section .section-content .section-contentInner2 .txt {
   position: absolute;
-  top: 26%;
-  right: 5%;
+  top: 28%;
+  right: 10%;
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt {
-    top: 25%;
-    right: 2%;
+    top: 28%;
+    right: 5%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt__descMain {
@@ -4866,7 +4867,7 @@ input[type=checkbox] {
 @media (min-width: 1024px) {
   .collection__viewMore {
     position: absolute;
-    top: 65%;
+    top: 63.5%;
     right: 52px;
   }
 }

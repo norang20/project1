@@ -24,6 +24,7 @@
 .container {
   width: 1280px;
   margin: 0 auto;
+  padding-top: 100px;
   position: relative;
   @include mobile {
     width: 100%;
@@ -206,13 +207,13 @@
         }
         .txt {
           position: absolute;
-          top: 26%;
-          right: 5%;
+          top: 28%;
+          right: 10%;
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 25%;
-            right: 2%;
+            top: 28%;
+            right: 5%;
           }
           &__descMain {
             font-weight: bold;
@@ -401,7 +402,7 @@
   margin-bottom: 66px;
   @include tabletMore {
     position: absolute;
-    top: 65%;
+    top: 63.5%;
     right: 52px;
   }
   cursor: pointer;
