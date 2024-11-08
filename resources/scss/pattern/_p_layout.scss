@@ -1,5 +1,9 @@
-// 사이트 레이아웃 관련 요소
-body {
+body,
+html {
+  max-width: 100%;
+}
+body,
+html {
   overflow-x: hidden;
 }
 .bg-gray {
@@ -88,6 +92,7 @@ body {
 #header {
   position: relative;
   z-index: 1000;
+  overflow-x: hidden;
   &.active {
     &::before {
       height: 218px;
@@ -259,7 +264,7 @@ body {
       .lang__lst {
         display: block;
         @include mobile {
-          display: none;
+          /* display: none; */
         }
       }
     }
@@ -289,7 +294,7 @@ body {
       background: $white;
       text-align: center;
       @include mobile {
-        display: none;
+        /* display: none; */
         border: 0px solid $gray-40;
       }
       li {
@@ -297,7 +302,7 @@ body {
         text-transform: uppercase;
         cursor: pointer;
         @include mobile {
-          display: none;
+          /* display: none; */
         }
         &:first-child {
           border-bottom: 1px solid $gray-40;

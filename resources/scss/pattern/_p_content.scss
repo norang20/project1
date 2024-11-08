@@ -189,7 +189,7 @@
         margin: 20px 22px;
         .title2 {
           position: absolute;
-          top: 16%;
+          top: 17%;
           font-family: "AlbraSansTRIAL-Medium";
           font-size: 8.75rem;
           font-weight: bold;
@@ -203,6 +203,7 @@
           @include mobile {
             font-size: 4.125rem;
             line-height: 5.1rem;
+            top: 18%;
           }
         }
         .txt {
@@ -212,8 +213,8 @@
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 27%;
-            left: 6%;
+            top: 27.5%;
+            left: 7%;
           }
           &__descMain {
             font-weight: bold;
@@ -409,7 +410,7 @@
   @include mobile {
     display: block;
     width: 100%;
-    margin: 0 16px;
+    margin: 0 25px;
   }
   @include tablet {
     display: block;

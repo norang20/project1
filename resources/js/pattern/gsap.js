@@ -33,17 +33,29 @@ window.addEventListener(
     }
   })
 );
-
+// 첫 번째 애니메이션
 gsap.to(".section-contentInner", {
-  /* 움직임을 주고 싶은 요소 */
   scrollTrigger: {
-    trigger: ".section-contentInner", // 움직임의 기준이 되는 요소,, 요소가 뷰포트에 드러나는 순간부터 애니메이션이 작동
-    start: "-200% top", // 애니메이션 시작시점
-    end: "bottom 10%", // 애니메이션 종료시점
-    scrub: 2,
+    trigger: ".section-contentInner",
+    start: "-200% center",
+    end: "bottom 10%",
+    scrub: 1, // 더 부드러운 반응 속도를 위해 scrub을 1로 설정
     pin: false,
-    /* markers: true, */ // 트리거 마커의 표시(boolean)
   },
   y: -150,
   duration: 1,
+});
+
+// 두 번째 애니메이션
+gsap.to(".title2", {
+  scrollTrigger: {
+    trigger: ".title2",
+    start: "-300% center",
+    end: "bottom 10%",
+    scrub: 1, // 애니메이션과 스크롤을 더 부드럽게 동기화
+    pin: false,
+  },
+  y: -100,
+  duration: 1.5,
+  ease: "power2.inOut", // 부드럽고 자연스러운 이징
 });

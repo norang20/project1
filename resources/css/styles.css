@@ -3500,7 +3500,13 @@ input[type=checkbox] {
   border-width: 2px;
 }
 
-body {
+body,
+html {
+  max-width: 100%;
+}
+
+body,
+html {
   overflow-x: hidden;
 }
 
@@ -3600,6 +3606,7 @@ body {
 #header {
   position: relative;
   z-index: 1000;
+  overflow-x: hidden;
   /* &::before {
     content: "";
     // display: none;
@@ -3774,7 +3781,7 @@ body {
 }
 @media (max-width: 599px) {
   .util .lang.active .lang__lst {
-    display: none;
+    /* display: none; */
   }
 }
 .util .lang__btn {
@@ -3808,7 +3815,7 @@ body {
 }
 @media (max-width: 599px) {
   .util .lang__lst {
-    display: none;
+    /* display: none; */
     border: 0px solid #c6c6c6;
   }
 }
@@ -3819,7 +3826,7 @@ body {
 }
 @media (max-width: 599px) {
   .util .lang__lst li {
-    display: none;
+    /* display: none; */
   }
 }
 .util .lang__lst li:first-child {
@@ -4639,7 +4646,7 @@ body {
 }
 .container .section .section-content .section-contentInner2 .title2 {
   position: absolute;
-  top: 16%;
+  top: 17%;
   font-family: "AlbraSansTRIAL-Medium";
   font-size: 8.75rem;
   font-weight: bold;
@@ -4656,6 +4663,7 @@ body {
   .container .section .section-content .section-contentInner2 .title2 {
     font-size: 4.125rem;
     line-height: 5.1rem;
+    top: 18%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt {
@@ -4667,8 +4675,8 @@ body {
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt {
-    top: 27%;
-    left: 6%;
+    top: 27.5%;
+    left: 7%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt__descMain {
@@ -4879,7 +4887,7 @@ body {
   .collection__viewMore {
     display: block;
     width: 100%;
-    margin: 0 16px;
+    margin: 0 25px;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
