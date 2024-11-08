@@ -208,12 +208,12 @@
         .txt {
           position: absolute;
           top: 28%;
-          right: 10%;
+          right: 8%;
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 28%;
-            right: 5%;
+            top: 27%;
+            left: 6%;
           }
           &__descMain {
             font-weight: bold;

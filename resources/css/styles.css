@@ -3500,6 +3500,10 @@ input[type=checkbox] {
   border-width: 2px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .bg-gray {
   background-color: #f8f8f8;
 }
@@ -4657,14 +4661,14 @@ input[type=checkbox] {
 .container .section .section-content .section-contentInner2 .txt {
   position: absolute;
   top: 28%;
-  right: 10%;
+  right: 8%;
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt {
-    top: 28%;
-    right: 5%;
+    top: 27%;
+    left: 6%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt__descMain {
