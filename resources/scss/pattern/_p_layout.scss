@@ -17,7 +17,10 @@ html {
   max-width: $grid;
   margin: 0 auto;
   padding: 0 $p-mobile;
-  @include tablet {
+  @include mobileMore {
+  }
+  @include tabletMore {
+    margin: 0;
     padding: 0 $p-tablet;
   }
 }
@@ -30,6 +33,7 @@ html {
   width: 100%;
   text-align: center;
   background-color: $gray-90;
+
   a {
     &:not(:focus) {
       @include sr-only;
@@ -90,7 +94,10 @@ html {
 
 // header
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   overflow-x: hidden;
   &.active {
@@ -119,10 +126,6 @@ html {
     align-items: center;
     max-width: none;
     height: 111px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     @include mobile {
       justify-content: space-between;
     }

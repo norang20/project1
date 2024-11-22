@@ -3521,8 +3521,9 @@ html {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 1024px) {
   .inner {
+    margin: 0;
     padding: 0 30px;
   }
 }
@@ -3604,7 +3605,10 @@ html {
 }
 
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   overflow-x: hidden;
   /* &::before {
@@ -3632,10 +3636,6 @@ html {
   align-items: center;
   max-width: none;
   height: 111px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 @media (max-width: 599px) {
   #header .inner {
@@ -4604,10 +4604,10 @@ html {
 }
 .container .section .section-content .section-contentInner .title {
   font-family: "AlbraSansTRIAL-Medium";
-  font-size: 8.75rem;
+  font-size: 7.05rem;
   font-weight: bold;
   letter-spacing: 3px;
-  line-height: 135px;
+  line-height: 1.2;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .section .section-content .section-contentInner .title {
