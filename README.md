@@ -2,6 +2,8 @@
 
 이 프로젝트는 **설화수(Sulwhasoo)** 웹사이트의 메인 페이지(`index.html`)와 서브 페이지를 리뉴얼한 작업입니다.
 **JavaScript**, **GSAP**, **SCSS**와 같은 최신 웹 기술을 활용하여 시각적으로 매력적이고 인터랙티브한 사용자 경험을 제공합니다.
+또한, 프로젝트 구조 및 파일 관리는 **KRDS**(디지털 정부서비스 UI/UX 가이드라인)를 참고하여 체계적으로 구성했습니다.
+
 
 ## 🔍 주요 특징
 
@@ -16,8 +18,9 @@
 - **JavaScript**: 사용자 상호작용 및 기능 구현.
 - **GSAP**: 고품질 애니메이션과 트랜지션 구현.
 -
-  ![yejiahn_sulwhasoo_index html_Capture](https://github.com/user-attachments/assets/4ca0d41c-5cd8-4955-8b6c-90b8060e72ba)
-
+ ![yejiahn_sulwhasoo_index html_Capture](https://github.com/user-attachments/assets/4ca0d41c-5cd8-4955-8b6c-90b8060e72ba)
+![yejiahn_sulwhasoo_shopping html_Capture png](https://github.com/user-attachments/assets/f9eec401-39cb-4142-8b92-9df054f56aa9)
+![yejiahn_sulwhasoo_heritage html_Capture png](https://github.com/user-attachments/assets/ef1995ad-075b-49db-aba6-588662b28e37)
 
 
 
