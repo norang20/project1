@@ -3505,11 +3505,10 @@ html {
   max-width: 100%;
 }
 
-body,
+/* body,
 html {
   overflow-x: hidden;
-}
-
+} */
 .bg-gray {
   background-color: #f8f8f8;
 }
@@ -4600,6 +4599,7 @@ html {
   position: relative;
 }
 .container .section .section-content .section-contentInner {
+  text-align: center;
   margin: 20px 22px;
 }
 .container .section .section-content .section-contentInner .title {
@@ -4651,7 +4651,7 @@ html {
   font-size: 8.75rem;
   font-weight: bold;
   letter-spacing: 3px;
-  line-height: 135px;
+  line-height: 1.2;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .container .section .section-content .section-contentInner2 .title2 {
@@ -4663,7 +4663,7 @@ html {
   .container .section .section-content .section-contentInner2 .title2 {
     font-size: 4.125rem;
     line-height: 5.1rem;
-    top: 18%;
+    top: 17.5%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt {
@@ -4930,6 +4930,26 @@ html {
 }
 /* index 끝 */
 /* 서브페이지여도 content.scss에 이름 다르게 같이 다 넣기 */
+.heritage_main {
+  display: flex;
+  justify-content: center; /* 가로 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  height: 100vh; /* 컨테이너 높이를 화면 높이로 설정 */
+}
+
+.heritage_main_Image {
+  max-width: 100%; /* 이미지가 컨테이너를 넘지 않도록 설정 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 8px;
+}
+
+.heritagePage_inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  height: 100vh;
+}
+
 /* shopping.html */
 .shopping_item {
   box-sizing: border-box;
