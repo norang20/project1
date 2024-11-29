@@ -3505,10 +3505,11 @@ html {
   max-width: 100%;
 }
 
-/* body,
+body,
 html {
   overflow-x: hidden;
-} */
+}
+
 .bg-gray {
   background-color: #f8f8f8;
 }
