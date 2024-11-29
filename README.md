@@ -1,5 +1,23 @@
-![yejiahn_sulwhasoo_index html_Capture](https://github.com/user-attachments/assets/4ca0d41c-5cd8-4955-8b6c-90b8060e72ba)
-# 프로젝트명
+# 설화수 웹사이트 리뉴얼
+
+이 프로젝트는 **설화수(Sulwhasoo)** 웹사이트의 메인 페이지(`index.html`)와 서브 페이지를 리뉴얼한 작업입니다.
+**JavaScript**, **GSAP**, **SCSS**와 같은 최신 웹 기술을 활용하여 시각적으로 매력적이고 인터랙티브한 사용자 경험을 제공합니다.
+
+## 🔍 주요 특징
+
+- **다이나믹한 애니메이션**: GSAP을 활용한 부드럽고 매끄러운 화면 전환 효과.
+- **반응형 디자인**: SCSS를 활용해 다양한 디바이스 환경에 최적화.
+- **향상된 사용자 경험**: 모던한 디자인과 인터랙션 기능 구현.
+
+## 🛠️ 사용된 기술
+
+- **HTML**: 웹 페이지의 구조를 설계.
+- **SCSS**: 변수, 중첩, 모듈화를 사용한 효율적인 스타일링.
+- **JavaScript**: 사용자 상호작용 및 기능 구현.
+- **GSAP**: 고품질 애니메이션과 트랜지션 구현.
+-
+  ![yejiahn_sulwhasoo_index html_Capture](https://github.com/user-attachments/assets/4ca0d41c-5cd8-4955-8b6c-90b8060e72ba)
+
 
 KRDS (https://uiux.egovframe.go.kr/) 템플릿
 
