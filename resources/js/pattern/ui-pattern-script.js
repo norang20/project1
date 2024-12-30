@@ -48,3 +48,31 @@ $(".lang__lst").mouseleave(function () {
   scrollingSpeed: 1000 
 });
  */
+$(document).ready(function () {
+  AOS.init();
+  gsap.registerPlugin(ScrollTrigger);
+
+  var scene = document.getElementById("scene");
+  var parallaxInstance = new Parallax(scene);
+
+  // 페이지가 로드될 때 스크롤을 맨 위로 이동
+  window.onload = function () {
+    window.scrollTo(0, 0);
+    // 주석 풀기
+    $("body").css("overflow", "hidden");
+  };
+  // intro
+  // 주석 풀기
+  $("#intro .btn-icon").on("click", function () {
+    var a = document.getElementById("intro_video_inner");
+    a.pause();
+    $("#intro_video_inner ").fadeOut(1000);
+    var tl = gsap.timeline();
+    tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
+      .to($("#header"), { top: "0px" })
+      .to($("body"), { overflow: "visible" })
+      .fromTo($(".poster1"), 1.5, { x: -100, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.4 }, 2)
+      .fromTo($("#scene01 .content1"), 1.5, { x: 100, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.4 }, 4);
+    window.scrollTo(0, 0);
+  });
+});
