@@ -2,46 +2,10 @@
 :root {
   --swiper-theme-color: red;
 }
-#intro {
-  position: fixed;
-  // 주석 풀기
-  z-index: 1000;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  top: 0 !important;
 
-  #intro_video {
-    height: 100vh;
-    position: absolute;
-    left: 50%;
-    margin-left: -960px;
-    top: 0;
-    overflow: hidden;
-    /*     filter: grayscale(100%); */
-  }
-  .btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    position: absolute;
-    bottom: 10%;
-    left: calc(100vw / 2);
-    transform: translateX(-50%);
-  }
-  .btn-icon {
-    width: 70px;
-    height: 70px;
-    background: url(/resources/images/pattern/common/sulwhasoo_orange_logo_220902.jpeg) no-repeat 50% 50% / cover;
-  }
-  .btn-desc {
-    @include cont(14px);
-    color: $white;
-  }
-}
 .bg-video {
   width: 100%;
+  height: 100vh;
   z-index: -1;
   opacity: 0.15;
   &__content {
@@ -49,15 +13,15 @@
     height: 100vh;
     transform-origin: center;
     object-fit: cover;
-    object-position: 48% 39%;
+    object-position: 48% 75%;
     @include tabletLess {
       width: 100%;
       height: 100vh;
       object-fit: cover;
+      object-position: 48% 39%;
     }
   }
-} /* bg-video */
-
+}
 .container {
   width: 1280px;
   margin: 0 auto;
