@@ -3571,7 +3571,7 @@ html {
 
 .sec-g {
   overflow: hidden;
-  padding: 10vw 0;
+  /*  padding: 10vw 0; */
 }
 .sec-g__tit {
   padding-bottom: 2.34375vw;
@@ -4717,7 +4717,7 @@ html {
 }
 .container .section .section-content .section-contentInner2 .title2 {
   position: absolute;
-  top: 17%;
+  top: 22%;
   font-family: "AlbraSansTRIAL-Medium";
   font-size: 8.75rem;
   font-weight: bold;
@@ -4734,34 +4734,34 @@ html {
   .container .section .section-content .section-contentInner2 .title2 {
     font-size: 4.125rem;
     line-height: 5.1rem;
-    top: 17.5%;
+    top: 24.5%;
   }
 }
-.container .section .section-content .section-contentInner2 .txt {
+.container .section .section-content .section-contentInner2 .txt2 {
   position: absolute;
-  top: 28%;
-  right: 8%;
+  top: 36%;
+  right: 4%;
   font-family: "Noto Sans KR";
   margin: 4px 0 50px 0;
 }
 @media (max-width: 599px) {
-  .container .section .section-content .section-contentInner2 .txt {
-    top: 28%;
+  .container .section .section-content .section-contentInner2 .txt2 {
+    top: 39.5%;
     left: 7%;
   }
 }
-.container .section .section-content .section-contentInner2 .txt__descMain {
+.container .section .section-content .section-contentInner2 .txt2__descMain {
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 0%;
   line-height: auto;
   margin: 8px 0;
 }
-.container .section .section-content .section-contentInner2 .txt__descSub {
+.container .section .section-content .section-contentInner2 .txt2__descSub {
   margin-top: 19px;
   font-size: 1.3rem;
 }
-.container .section .section-content .section-contentInner2 .txt__price {
+.container .section .section-content .section-contentInner2 .txt2__price {
   margin-top: 12px;
   color: #666;
   font-size: 1.2rem;
@@ -4951,7 +4951,7 @@ html {
 @media (min-width: 1024px) {
   .collection__viewMore {
     position: absolute;
-    top: 63.5%;
+    top: 85%;
     right: 52px;
   }
 }

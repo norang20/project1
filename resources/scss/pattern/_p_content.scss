@@ -138,6 +138,7 @@
     .section-img,
     .section-img2 {
       text-align: center;
+
       @include mobile {
         .yunjoimg {
           width: 50%;
@@ -193,7 +194,7 @@
 
         .title2 {
           position: absolute;
-          top: 17%;
+          top: 22%;
           font-family: "AlbraSansTRIAL-Medium";
           font-size: 8.75rem;
           font-weight: bold;
@@ -207,17 +208,17 @@
           @include mobile {
             font-size: 4.125rem;
             line-height: 5.1rem;
-            top: 17.5%;
+            top: 24.5%;
           }
         }
-        .txt {
+        .txt2 {
           position: absolute;
-          top: 28%;
-          right: 8%;
+          top: 36%;
+          right: 4%;
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 28%;
+            top: 39.5%;
             left: 7%;
           }
           &__descMain {
@@ -417,7 +418,7 @@
   margin-bottom: 66px;
   @include tabletMore {
     position: absolute;
-    top: 63.5%;
+    top: 85%;
     right: 52px;
   }
   cursor: pointer;

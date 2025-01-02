@@ -41,20 +41,29 @@ gsap.from(".section-contentInner", {
   ease: "power2.out",
   duration: 1,
 });
-
-// 두 번째 애니메이션 - .title2 스크롤에 반응
-gsap.from(".title2", {
+gsap.from(".title2 ", {
   scrollTrigger: {
-    trigger: ".title2", // 트리거할 요소
-    start: "top 80%", // 요소가 화면 80% 지점에서 애니메이션 시작
-    end: "bottom 60%", // 요소가 화면 60% 지점에서 애니메이션 종료
-    scrub: 1, // 부드러운 스크롤 동기화
-    markers: false,
+    trigger: ".txt__price",
+    start: "top top", // 애니메이션 시작시점
+    end: "bottom bottom", // 애니메이션 종료시점
+    scrub: 1,
+    markers: true, // 디버깅용으로 마커를 표시
   },
-  y: 70, // 70px 아래에서 위로 이동
-  opacity: 0, // 초기 투명 상태
-  ease: "power2.out", // 부드럽게 끝나는 이징
-  duration: 1, // 애니메이션 지속 시간
+  y: 70, // 아래에서 위로 이동
+  opacity: 0, // 처음에 투명
+  ease: "power2.out",
+  duration: 1,
 });
-
-// **throttle을 Lodash 없이 직접 구현할 경우** 아래와 같이 작성할 수 있습니다.
+gsap.from(".txt2 ", {
+  scrollTrigger: {
+    trigger: ".section-img2",
+    start: "top top", // 애니메이션 시작시점
+    end: "top bottom", // 애니메이션 종료시점
+    scrub: 1,
+    markers: true, // 디버깅용으로 마커를 표시
+  },
+  y: 70, // 아래에서 위로 이동
+  opacity: 0, // 처음에 투명
+  ease: "power2.out",
+  duration: 1,
+});
