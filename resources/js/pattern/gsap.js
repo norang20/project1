@@ -1,33 +1,6 @@
 // GSAP와 ScrollTrigger 플러그인 등록
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("scroll", function () {
-  const scrolled = window.scrollY; /* 스크롤 값 */
-  console.log(`스크롤 값 : ${scrolled}`);
-
-  //만약 y축 스크롤 값이 80보다 크다면
-  if (scrolled > 80) {
-    gsap.to("#header", {
-      y: -100,
-      duration: 1,
-    });
-    gsap.to("#to-top", {
-      x: -70,
-      duration: 0.3,
-    });
-  } else {
-    gsap.to("#header", {
-      y: 0,
-      duration: 1,
-    });
-    gsap.to("#to-top", {
-      x: 0,
-      duration: 0.3,
-    });
-  }
-});
-console.log("안녕");
-
 document.addEventListener("DOMContentLoaded", function () {
   // 약간의 지연을 주어 DOM이 완전히 준비되도록 함
   setTimeout(() => {
