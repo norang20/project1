@@ -28,42 +28,47 @@ window.addEventListener("scroll", function () {
 });
 console.log("안녕");
 
-gsap.from(".section-contentInner", {
-  scrollTrigger: {
-    trigger: ".section-contentInner",
-    start: "top 80%",
-    end: "bottom 60%",
-    scrub: 1,
-    markers: false,
-  },
-  y: 70, // 아래에서 위로 이동 (초기 위치)
-  opacity: 0, // 투명도 설정 (처음에 투명)
-  ease: "power2.out",
-  duration: 1,
-});
-gsap.from(".title2 ", {
-  scrollTrigger: {
-    trigger: ".txt__price",
-    start: "top top", // 애니메이션 시작시점
-    end: "bottom bottom", // 애니메이션 종료시점
-    scrub: 1,
-    markers: true, // 디버깅용으로 마커를 표시
-  },
-  y: 70, // 아래에서 위로 이동
-  opacity: 0, // 처음에 투명
-  ease: "power2.out",
-  duration: 1,
-});
-gsap.from(".txt2 ", {
-  scrollTrigger: {
-    trigger: ".section-img2",
-    start: "top top", // 애니메이션 시작시점
-    end: "top bottom", // 애니메이션 종료시점
-    scrub: 1,
-    markers: true, // 디버깅용으로 마커를 표시
-  },
-  y: 70, // 아래에서 위로 이동
-  opacity: 0, // 처음에 투명
-  ease: "power2.out",
-  duration: 1,
+document.addEventListener("DOMContentLoaded", function () {
+  // 약간의 지연을 주어 DOM이 완전히 준비되도록 함
+  setTimeout(() => {
+    const animations = [
+      {
+        element: ".section-contentInner",
+        trigger: ".section-contentInner",
+        start: "top 80%",
+        end: "bottom 60%",
+      },
+      {
+        element: ".title2",
+        trigger: ".txt__price",
+        start: "top top",
+        end: "bottom bottom",
+      },
+      {
+        element: ".txt2",
+        trigger: ".section-img2",
+        start: "top top",
+        end: "top bottom",
+      },
+    ];
+
+    animations.forEach(({ element, trigger, start, end }) => {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: trigger,
+          start: start,
+          end: end,
+          scrub: 1,
+          markers: false, // 프로덕션에서는 false로 설정
+          // 모바일에서의 성능 최적화를 위한 옵션
+          toggleActions: "play none none reverse",
+          fastScrollEnd: true,
+        },
+        y: 70,
+        opacity: 0,
+        ease: "power2.out",
+        duration: 1,
+      });
+    });
+  }, 100);
 });
