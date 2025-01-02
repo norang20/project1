@@ -4752,13 +4752,13 @@ html {
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt2 {
-    top: 37%;
+    top: 35%;
     left: 7%;
   }
 }
 @media (max-width: 375px) {
   .container .section .section-content .section-contentInner2 .txt2 {
-    top: 36%;
+    top: 33%;
     left: 7%;
   }
 }

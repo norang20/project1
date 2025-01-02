@@ -222,11 +222,11 @@
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 37%;
+            top: 35%;
             left: 7%;
           }
           @media (max-width: 375px) {
-            top: 36%;
+            top: 33%;
             left: 7%;
           }
           &__descMain {
