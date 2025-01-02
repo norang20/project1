@@ -207,8 +207,8 @@
           }
           @include mobile {
             font-size: 4.125rem;
-            line-height: 5.1rem;
-            top: 24.5%;
+            line-height: 1.2;
+            top: 23.8%;
           }
         }
         .txt2 {
@@ -218,7 +218,7 @@
           font-family: "Noto Sans KR";
           margin: 4px 0 50px 0;
           @include mobile {
-            top: 39.5%;
+            top: 38.3%;
             left: 7%;
           }
           &__descMain {

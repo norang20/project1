@@ -4737,8 +4737,8 @@ html {
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .title2 {
     font-size: 4.125rem;
-    line-height: 5.1rem;
-    top: 24.5%;
+    line-height: 1.2;
+    top: 23.8%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt2 {
@@ -4750,7 +4750,7 @@ html {
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt2 {
-    top: 39.5%;
+    top: 38.3%;
     left: 7%;
   }
 }
