@@ -440,6 +440,7 @@ legend {
 @media (max-width: 599px) {
   .cont-item {
     max-width: 300px;
+    max-height: 488px;
   }
 }
 @media (min-width: 600px) {
