@@ -4496,10 +4496,6 @@ html {
   border: none;
 }
 
-.inner2 {
-  padding: 0 20px;
-}
-
 :root {
   --swiper-theme-color: red;
 }
@@ -4738,7 +4734,7 @@ html {
   .container .section .section-content .section-contentInner2 .title2 {
     font-size: 4.125rem;
     line-height: 1.2;
-    top: 23.8%;
+    top: 21.8%;
   }
 }
 .container .section .section-content .section-contentInner2 .txt2 {
@@ -4750,7 +4746,7 @@ html {
 }
 @media (max-width: 599px) {
   .container .section .section-content .section-contentInner2 .txt2 {
-    top: 37.3%;
+    top: 32.3%;
     left: 7%;
   }
 }
