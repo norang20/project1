@@ -4699,8 +4699,6 @@ html {
 .container .section .section-content .section-contentInner .txt__descMain {
   font-weight: bold;
   font-size: 2rem;
-  letter-spacing: 0%;
-  line-height: auto;
   margin: 8px 0;
 }
 .container .section .section-content .section-contentInner .txt__descSub {
